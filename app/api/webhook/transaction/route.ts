@@ -7,73 +7,54 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
   const data = await req.json();
 
-  try {
-    const transaction = await db.transaction.findUnique({
-      where: { id: data.order_id },
-      select: {
-        id: true,
-        amount: true,
-        status: true,
-        campaignId: true,
-        userId: true,
-        campaign: {
-          select: {
-            id: true,
-            collected: true,
-            numberOfWakif: true,
-            title: true,
-          }
-        },
-        user: {
-          select: {
-            id: true,
-            largestWakaf: true
-          }
+  const hash = createHash('sha512')
+    .update(`${data.order_id}${data.status_code}${data.gross_amount}${process.env.MIDTRANS_SERVER_KEY}`)
+    .digest('hex');
+
+  if (data.signature_key !== hash) {
+    return NextResponse.json({ status: 'success', message: 'OK' }, { status: 200 })
+  }
+
+  const transaction = await db.transaction.findUnique({
+    where: { id: data.order_id },
+    select: {
+      id: true,
+      amount: true,
+      status: true,
+      campaignId: true,
+      userId: true,
+      campaign: {
+        select: {
+          id: true,
+          collected: true,
+          numberOfWakif: true,
+          title: true,
+        }
+      },
+      user: {
+        select: {
+          id: true,
+          largestWakaf: true
         }
       }
-    });
+    }
+  });
 
-    if (transaction && transaction.status === 'PENDING') {
-      if (!transaction.user) {
-        return NextResponse
-          .json({ status: 'error', message: 'User not found' }, { status: 200 })
-      }
+  if (transaction && transaction.status === 'PENDING') {
+    if (!transaction.user) {
+      return NextResponse.json({ status: 'success', message: 'OK' }, { status: 200 })
+    }
 
-      if (!transaction.campaign) {
-        return NextResponse
-          .json({ status: 'error', message: 'Campaign not found' }, { status: 200 })
-      }
+    if (!transaction.campaign) {
+      return NextResponse.json({ status: 'success', message: 'OK' }, { status: 200 })
+    }
 
-      const hash = createHash('sha512')
-        .update(`${transaction.id}${data.status_code}${data.gross_amount}${process.env.MIDTRANS_SERVER_KEY}`)
-        .digest('hex');
+    const transactionStatus = data.transaction_status;
+    const fraudStatus = data.fraud_status;
+    const paymentType = ((data.store || data.payment_type || '') as string).replace('_', ' ');
 
-      if (data.signature_key !== hash) {
-        return NextResponse
-          .json({ status: 'error', message: 'Invalid signature key' }, { status: 200 })
-      }
-
-      const transactionStatus = data.transaction_status;
-      const fraudStatus = data.fraud_status;
-      const paymentType = ((data.store || data.payment_type || '') as string).replace('_', ' ');
-
-      if (transactionStatus == 'capture') {
-        if (fraudStatus == 'accept') {
-          // TODO set transaction status on your database to 'success'
-          // and response with 200 OK
-          await handleOnSuccess({
-            campaignId: transaction.campaign.id,
-            campaignNumberOfWakif: transaction.campaign.numberOfWakif,
-            collected: transaction.campaign.collected,
-            largestWakaf: transaction.user.largestWakaf,
-            paymentMethodLabel: `Midtrans ${paymentType.toUpperCase()}`,
-            titleCampaign: transaction.campaign.title,
-            transactionId: transaction.id,
-            userId: transaction.userId,
-            amount: transaction.amount,
-          })
-        }
-      } else if (transactionStatus == 'settlement') {
+    if (transactionStatus == 'capture') {
+      if (fraudStatus == 'accept') {
         // TODO set transaction status on your database to 'success'
         // and response with 200 OK
         await handleOnSuccess({
@@ -85,62 +66,72 @@ export async function POST(req: Request) {
           titleCampaign: transaction.campaign.title,
           transactionId: transaction.id,
           userId: transaction.userId,
-          amount: transaction.amount
-        })
-      } else if (transactionStatus == 'cancel' ||
-        transactionStatus == 'deny' ||
-        transactionStatus == 'expire') {
-        // TODO set transaction status on your database to 'failure'
-        // and response with 200 OK
-        await db.transaction.update({
-          where: { id: transaction.id },
-          data: {
-            status: 'FAILED'
-          }
+          amount: transaction.amount,
         });
 
-        await db.notification.create({
-          data: {
-            userId: transaction.userId,
-            title: 'Transaksi wakaf gagal',
-            type: 'ERROR',
-            message: `
-              Serah terima wakaf pada kampanye  
-              <b>${transaction.campaign.title}</b> 
-              dengan nominal ${formatRupiah(transaction.amount)} gagal dilakukan. 
-              Hal ini terjadi karena batas pembayaran wakaf telah kadaluarsa 
-              atau anda membatalkannya dihalaman transaksi detail. Lihat lebih rinci di  
-              <a href="/dashboard/transaction/${transaction.id}" target="_blank" rel="noopener noreferrer">
-                halaman transaksi
-              </a>.
-            `
-          }
-        })
-      } else if (transactionStatus == 'pending') {
-        // TODO set transaction status on your database to 'pending' / waiting payment
-        // and response with 200 OK
-        await db.transaction.update({
-          where: { id: transaction.id },
-          data: {
-            status: 'PENDING'
-          }
-        });
+        return NextResponse.json({ status: 'success', message: 'OK' }, { status: 200 })
       }
+    } else if (transactionStatus == 'settlement') {
+      // TODO set transaction status on your database to 'success'
+      // and response with 200 OK
+      await handleOnSuccess({
+        campaignId: transaction.campaign.id,
+        campaignNumberOfWakif: transaction.campaign.numberOfWakif,
+        collected: transaction.campaign.collected,
+        largestWakaf: transaction.user.largestWakaf,
+        paymentMethodLabel: `Midtrans ${paymentType.toUpperCase()}`,
+        titleCampaign: transaction.campaign.title,
+        transactionId: transaction.id,
+        userId: transaction.userId,
+        amount: transaction.amount
+      });
 
-      return NextResponse
-        .json({ status: 'success', message: 'OK' }, { status: 200 })
+      return NextResponse.json({ status: 'success', message: 'OK' }, { status: 200 })
+    } else if (transactionStatus == 'cancel' ||
+      transactionStatus == 'deny' ||
+      transactionStatus == 'expire') {
+      // TODO set transaction status on your database to 'failure'
+      // and response with 200 OK
+      await db.transaction.update({
+        where: { id: transaction.id },
+        data: {
+          status: 'FAILED'
+        }
+      });
+
+      await db.notification.create({
+        data: {
+          userId: transaction.userId,
+          title: 'Transaksi wakaf gagal',
+          type: 'ERROR',
+          message: `
+            Serah terima wakaf pada kampanye  
+            <b>${transaction.campaign.title}</b> 
+            dengan nominal ${formatRupiah(transaction.amount)} gagal dilakukan. 
+            Hal ini terjadi karena batas pembayaran wakaf telah kadaluarsa 
+            atau anda membatalkannya dihalaman transaksi detail. Lihat lebih rinci di  
+            <a href="/dashboard/transaction/${transaction.id}" target="_blank" rel="noopener noreferrer">
+              halaman transaksi
+            </a>.
+          `
+        }
+      });
+
+      return NextResponse.json({ status: 'success', message: 'OK' }, { status: 200 })
+    } else if (transactionStatus == 'pending') {
+      // TODO set transaction status on your database to 'pending' / waiting payment
+      // and response with 200 OK
+      await db.transaction.update({
+        where: { id: transaction.id },
+        data: {
+          status: 'PENDING'
+        }
+      });
+
+      return NextResponse.json({ status: 'success', message: 'OK' }, { status: 200 })
     }
 
-    if (transaction) {
-      return NextResponse
-        .json({ status: 'error', message: 'Transaction is not pending' }, { status: 200 })
-    }
-
-    return NextResponse
-      .json({ status: 'error', message: 'Transaction not found' }, { status: 200 })
-  } catch (error) {
-    return NextResponse
-      .json({ status: 'error', message: 'Server Error' }, { status: 200 })
+    return NextResponse.json({ status: 'success', message: 'OK' }, { status: 200 })
   }
 }
 
