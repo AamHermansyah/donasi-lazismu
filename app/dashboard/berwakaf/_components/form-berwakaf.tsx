@@ -65,7 +65,8 @@ function FormBerwakaf({ data, initialForm, user, campaignId }: IProps) {
         ...form.step2,
         ...form.step3,
         userId: user.id,
-        campaignId
+        campaignId,
+        paymentLogo: undefined
       })
         .then((res) => {
           if (res.status === 201) {
