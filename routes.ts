@@ -10,7 +10,8 @@ export const publicRoutes = [
   "/dashboard/campaign/:path",
   "/dashboard/leaderboard",
   "/404",
-  "/error"
+  "/error",
+  "/api/webhook/transaction"
 ];
 
 /**
