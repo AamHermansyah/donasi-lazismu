@@ -31,7 +31,7 @@ function RowAction({ disabled, onClickDelete }: IProps) {
             disabled={disabled}
             className="w-full flex items-center gap-2 text-red-500"
           >
-            <FiTrash2 /> Hapus admin
+            <FiTrash2 /> Hapus pengurus
           </button>
         </DropdownMenuItem>
       </DropdownMenuContent>

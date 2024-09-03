@@ -72,14 +72,14 @@ function DialogAddAdmin({ disabled, adminCount, superAdminCount }: IProps) {
           className="text-[10px] sm:text-xs rounded-lg"
           disabled={disabled}
         >
-          Tambah Admin
+          Tambah Pengurus
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader className="text-left">
-          <DialogTitle>Tambah admin</DialogTitle>
+          <DialogTitle>Tambah Pengurus</DialogTitle>
           <DialogDescription>
-            Anda dapat menambahkan super admin dan admin jika belum melebihi batas maksimal.
+            Anda dapat menambahkan pengurus keuangan dan pengurus biasa jika belum melebihi batas maksimal.
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
@@ -112,13 +112,13 @@ function DialogAddAdmin({ disabled, adminCount, superAdminCount }: IProps) {
                   value="SUPER_ADMIN"
                   disabled={superAdminCount >= 3}
                 >
-                  Super Admin
+                  Pengurus Keuangan
                 </SelectItem>
                 <SelectItem
                   value="ADMIN"
                   disabled={adminCount >= 10}
                 >
-                  Admin
+                  Pengurus
                 </SelectItem>
               </SelectContent>
             </Select>

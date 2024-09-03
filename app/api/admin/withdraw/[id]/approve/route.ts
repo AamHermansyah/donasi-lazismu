@@ -62,6 +62,18 @@ export async function POST(req: Request, { params }: { params: IParams }) {
       }
     });
 
+    await db.user.update({
+      where: { id: updatedWithdrawal.userId },
+      data: {
+        requestWithdrawalTotal: {
+          increment: updatedWithdrawal.amount,
+        },
+        requestWithdrawalCount: {
+          increment: 1,
+        },
+      }
+    })
+
     await db.notification.create({
       data: {
         userId: updatedWithdrawal.userId,

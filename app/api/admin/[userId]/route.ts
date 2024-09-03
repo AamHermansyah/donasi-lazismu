@@ -56,7 +56,7 @@ export async function POST(req: Request, { params }: { params: IParams }) {
       data: {
         userId,
         type: 'GENERAL',
-        title: 'Wow... Anda dipromosikan oleh admin🤩',
+        title: 'Wow... Anda dipromosikan oleh pengurus🤩',
         message: `
           Hallo ${updatedAdmin.name} sekarang anda telah menjadi 
           <b>${updatedAdmin.role.replace('_', '')}</b> yang dipromosikan oleh 

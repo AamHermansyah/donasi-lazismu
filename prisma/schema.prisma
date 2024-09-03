@@ -47,21 +47,23 @@ enum WithdrawalStatus {
 }
 
 model User {
-  id               String    @id @default(cuid())
-  name             String?
-  email            String?   @unique
-  emailVerified    DateTime?
-  image            String?
-  password         String?
-  phoneNumber      String?
-  institution      String?
-  address          String?
-  profession       String?
-  role             UserRole  @default(USER)
-  berwakafTotal    Int       @default(0)
-  berwakafCount    Int       @default(0)
-  largestWakaf     Int       @default(0)
-  adminRecruitedAt DateTime?
+  id                     String    @id @default(cuid())
+  name                   String?
+  email                  String?   @unique
+  emailVerified          DateTime?
+  image                  String?
+  password               String?
+  phoneNumber            String?
+  institution            String?
+  address                String?
+  profession             String?
+  role                   UserRole  @default(USER)
+  berwakafTotal          Int       @default(0)
+  berwakafCount          Int       @default(0)
+  largestWakaf           Int       @default(0)
+  requestWithdrawalTotal Int       @default(0)
+  requestWithdrawalCount Int       @default(0)
+  adminRecruitedAt       DateTime?
 
   accounts          Account[]
   campaigns         Campaign[]

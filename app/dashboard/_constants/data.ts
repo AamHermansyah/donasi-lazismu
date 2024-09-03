@@ -34,7 +34,7 @@ export const sidebarNavItems: SidebarNavItems[] = [
   {
     href: "/dashboard/manage-admin",
     icon: BiUser,
-    text: "Kelola Admin",
+    text: "Kelola Pengurus",
     role: 'SUPER_ADMIN'
   },
   {

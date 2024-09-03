@@ -35,9 +35,9 @@ const ManageAdminPage = async () => {
         <AiOutlineExclamationCircle fontSize={22} />
         <AlertTitle>Informasi perekrutan</AlertTitle>
         <AlertDescription>
-          Perekrutan admin dan super admin memiliki batas maksimal.
-          Jumlah maksimal admin yang diperbolehkan adalah <b>10 orang</b>,
-          sementara jumlah maksimal super admin yang diperbolehkan adalah <b>2 orang</b>.
+          Perekrutan pengurus dan pengurus keuangan memiliki batas maksimal.
+          Jumlah maksimal pengurus biasa yang diperbolehkan adalah <b>10 orang</b>,
+          sementara jumlah maksimal pengurus keuangan yang diperbolehkan adalah <b>2 orang</b>.
         </AlertDescription>
       </Alert>
       <DataTable

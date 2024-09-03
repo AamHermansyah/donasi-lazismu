@@ -19,6 +19,8 @@ export const getAllAdmins = async () => {
         role: true,
         email: true,
         adminRecruitedAt: true,
+        requestWithdrawalTotal: true,
+        requestWithdrawalCount: true,
       },
     });
 

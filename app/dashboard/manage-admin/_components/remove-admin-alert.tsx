@@ -59,8 +59,8 @@ function RemoveAdminAlert({ adminId, onCancel, onOpenChange, open }: IProps) {
         <AlertDialogHeader>
           <AlertDialogTitle>Apakah kamu yakin?</AlertDialogTitle>
           <AlertDialogDescription>
-            Aksi ini akan menghapus admin yang sedang beroperasi saat ini.
-            Jangan khawatir pengguna dapat di jadikan admin kembali.
+            Aksi ini akan menghapus pengurus yang sedang beroperasi saat ini.
+            Jangan khawatir pengguna dapat di jadikan pengurus kembali.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>

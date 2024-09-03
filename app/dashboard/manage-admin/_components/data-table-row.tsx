@@ -2,7 +2,7 @@ import { TableCell } from '@/components/core/table'
 import React from 'react'
 import RowAction from './row-action'
 import { AdminListType } from './data-table';
-import { formatIndonesianDate } from '@/lib/utils';
+import { formatIndonesianDate, formatRupiah } from '@/lib/utils';
 import { ADMIN_EMAIL } from '@/lib/constants';
 
 interface IProps {
@@ -25,15 +25,15 @@ function DataTableRow({ data, onClickDelete }: IProps) {
           <div>
             <p className="w-full">{data.name}</p>
             <span className="text-[10px] font-bold text-secondary whitespace-nowrap">
-              {data.role.replace('_', ' ')}
+              {data.role === 'ADMIN' ? 'Pengurus' : 'Pengurus Keuangan'}
             </span>
           </div>
         </div>
       </TableCell>
       <TableCell>{data.email}</TableCell>
       <TableCell>{formatIndonesianDate(new Date(data.adminRecruitedAt!))}</TableCell>
-      <TableCell className="text-center">9x</TableCell>
-      <TableCell>Rp. 9.000.000</TableCell>
+      <TableCell className="text-center">{data.requestWithdrawalCount}x</TableCell>
+      <TableCell>{formatRupiah(data.requestWithdrawalTotal)}</TableCell>
       <TableCell className="text-center rounded-r-lg">
         <RowAction
           disabled={data.email === ADMIN_EMAIL}

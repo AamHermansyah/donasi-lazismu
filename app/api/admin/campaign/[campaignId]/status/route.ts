@@ -89,7 +89,7 @@ export async function PATCH(req: Request, { params }: { params: IParams }) {
             ${formatRupiah(updatedCampaign.collected)}. Anda dapat melihat detail kampanye tersebut di  
             <a href="/dashboard/campaign/${campaign.id}" target="_blank" rel="noopener noreferrer">
               halaman detail
-            </a>. Silahkan hubungi admin tersebut jika ada masalah atau kendala mengenai hal ini.
+            </a>. Silahkan hubungi pengurus tersebut jika ada masalah atau kendala mengenai hal ini.
           `
         }
       })

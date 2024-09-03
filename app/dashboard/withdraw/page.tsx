@@ -38,7 +38,7 @@ async function WithdrawPage() {
         <div className="p-4 rounded-lg bg-background">
           <p className="text-xs">
             <b>Penting:</b> Wakaf tersedia mencakup jumlah wakaf dari seluruh kampanye.
-            Namun, jika ada permintaan penarikan oleh admin dengan status pending,
+            Namun, jika ada permintaan penarikan oleh pengurus dengan status pending,
             jumlah wakaf tersedia akan dikurangi sesuai dengan jumlah permintaan penarikan tersebut.
           </p>
         </div>

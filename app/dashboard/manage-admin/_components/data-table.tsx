@@ -19,7 +19,9 @@ export type AdminListType = Pick<User,
   'image' |
   'role' |
   'email' |
-  'adminRecruitedAt'
+  'adminRecruitedAt' |
+  'requestWithdrawalTotal' |
+  'requestWithdrawalCount'
 >
 
 interface IProps {
@@ -42,7 +44,7 @@ const DataTable: React.FC<IProps> = ({ data, disabled }) => {
         }}
       />
       <div className="w-full flex justify-between items-end mb-2">
-        <h2 className="font-semibold leading-0">Daftar Admin</h2>
+        <h2 className="font-semibold leading-0">Daftar Pengurus</h2>
         <DialogAddAdmin
           disabled={disabled}
           superAdminCount={data.filter((adm) => adm.role === 'SUPER_ADMIN').length}

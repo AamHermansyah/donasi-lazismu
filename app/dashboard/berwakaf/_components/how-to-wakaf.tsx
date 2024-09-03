@@ -26,7 +26,7 @@ function HowToWakaf({ className }: IProps) {
           Ikuti instruksi serah terima wakaf sesuai dengan metode pembayaran yang dipilih.
         </li>
         <li>
-          Setelah melakukan serah terima, admin akan melakukan konfirmasi serah terima wakaf.
+          Setelah melakukan serah terima, pengurus akan melakukan konfirmasi serah terima wakaf.
         </li>
         <li>
           anda akan menerima sertifikat dan wakaf anda telah tersalurkan.
