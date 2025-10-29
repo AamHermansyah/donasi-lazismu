@@ -10,12 +10,12 @@ const AboutUs = () => {
     <section id="about" className="relative py-12 bg-white">
       <div className="absolute -top-32 -right-10 z-0">
         <div className="relative aspect-square w-[270px] h-[610px] z-0">
-          {/* <Image
+          <Image
             src="/images/bg-vector-3-3.png"
             alt="bg-vector"
             fill={true}
             style={{ transform: "scaleX(-1)" }}
-          /> */}
+          />
         </div>
       </div>
       <div className="relative container flex flex-col lg:flex-row items-center gap-10 sm:gap-16">

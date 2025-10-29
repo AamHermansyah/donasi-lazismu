@@ -45,10 +45,10 @@ const ContactUs = () => {
 
             <div className="pt-4">
               <p className="text-gray-800 text-2xl font-semibold sm:text-4xl">
-                Ada masalah atau saran?
+                Ada Pertanyaan atau Saran?
               </p>
               <p>
-                Kami disini menampung segala masukan berupa masalah, saran, dan solusi yang ada di lingkungan pondok pesantren! Isi formulir atau kamu bisa menghubungi informasi kontak dibawah:
+               LAZISMU siap mendengar masukan, pertanyaan, dan saran Anda mengenai pengelolaan ZISKA, program, atau donasi. Isi formulir atau Anda dapat menghubungi kontak di bawah ini:
               </p>
             </div>
             <div>

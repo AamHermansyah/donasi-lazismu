@@ -6,13 +6,43 @@ import officeBuildingIcon from "/public/images/icons/office-building.png";
 import parkingIcon from "/public/images/icons/parking.png";
 import mosqueIcon from "/public/images/icons/mosque.png";
 
+
 const Facilities = () => {
+  function CoreProgram({ emoji, title, desc }: {
+    emoji: string;
+    title: string;
+    desc: string;
+  }) {
+    return (
+      <div className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-6 shadow-sm hover:shadow-xl transition-shadow">
+        <div className="text-5xl mb-4">{emoji}</div>
+        <h3 className="text-secondary text-xl sm:text-2xl font-bold mb-2">
+          {title}
+        </h3>
+        <p className="text-gray-600 text-sm sm:text-base">{desc}</p>
+      </div>
+    );
+  }
+  
+  function SupportCard({ emoji, label, sub }: {
+    emoji: string;
+    label: string;
+    sub: string;
+  }) {
+    return (
+      <div className="flex flex-col items-center justify-center rounded-xl border border-gray-200 bg-gray-50 p-4 text-center hover:bg-white hover:shadow-md transition">
+        <div className="text-3xl mb-2">{emoji}</div>
+        <div className="text-secondary font-semibold text-sm">{label}</div>
+        <div className="text-gray-500 text-xs mt-1">{sub}</div>
+      </div>
+    );
+  }
   return (
     <section id="facilities">
       <div className="absolute -left-10 z-0">
-        {/* <div className="relative aspect-square w-[270px] h-[610px] z-0">
+        <div className="relative aspect-square w-[270px] h-[610px] z-0">
           <Image src="/images/bg-vector-3-3.png" alt="bg-vector" fill />
-        </div> */}
+        </div>
       </div>
 
       <div className="relative container flex flex-col py-8 overflow-hidden">
@@ -51,141 +81,46 @@ const Facilities = () => {
 
         {/* Grid layanan/program */}
         <div className="mt-12 py-10">
-          <div className="mb-8 space-y-3">
-            <h2 className="text-secondary text-3xl sm:text-5xl xl:text-6xl font-bold text-center">
+          {/* Header */}
+          <div className="mb-10 space-y-3 text-center">
+            <h2 className="text-secondary text-3xl sm:text-5xl font-extrabold">
               Apa yang Kami Sediakan
             </h2>
-            <p className="text-gray-500 max-w-3xl mx-auto text-center">
-              Layanan pengelolaan ZISWAF, program pendayagunaan yang produktif,
-              serta dukungan kemudahan donasi dan kolaborasi untuk menebar
-              kemanfaatan secara luas.
+            <p className="text-gray-500 max-w-3xl mx-auto">
+              Zakat Anda disalurkan melalui program produktif berbasis pendidikan,
+              ekonomi dan sosial-dakwah—dengan layanan donasi yang mudah, transparan,
+              serta terpercaya.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-gray-800">
-            {/* 1 */}
-            <div className="flex items-center border rounded-md p-6">
-              <div className="flex-shrink-0 w-8 h-8">
-                <Image src={bedIcon} alt="ZISWAF Icon" width={32} height={32} />
-              </div>
-              <div className="ml-4 flex flex-col font-medium sm:text-lg">
-                <span className="text-secondary text-2xl sm:text-3xl font-bold">Amanah</span>
-                Pengelolaan Zakat, Infak & Wakaf (ZISWAF)
-              </div>
-            </div>
-
-            {/* 2 */}
-            <div className="flex items-center border rounded-md p-6">
-              <div className="flex-shrink-0 w-8 h-8">
-                <Image src={bedIcon} alt="Produktif Icon" width={32} height={32} />
-              </div>
-              <div className="ml-4 flex flex-col font-medium sm:text-lg">
-                <span className="text-secondary text-2xl sm:text-3xl font-bold">Produktif</span>
-                Pendayagunaan dana untuk pemberdayaan
-              </div>
-            </div>
-
-            {/* 3 */}
-            <div className="flex items-center border rounded-md p-6">
-              <div className="flex-shrink-0 w-8 h-8">
-                <Image src={homeIcon} alt="Kantor Icon" width={32} height={32} />
-              </div>
-              <div className="ml-4 flex flex-col font-medium sm:text-lg">
-                <span className="text-secondary text-2xl sm:text-3xl font-bold">Kantor</span>
-                Jl. Sukahaji Singasari, Singaparna – Tasikmalaya
-              </div>
-            </div>
-
-            {/* 4 */}
-            <div className="flex items-center border rounded-md p-6">
-              <div className="flex-shrink-0 w-8 h-8">
-                <Image src="/images/icons/town-hall.png" alt="Pendidikan Icon" width={30} height={30} />
-              </div>
-              <div className="ml-4 flex flex-col font-medium sm:text-lg">
-                <span className="text-secondary text-2xl sm:text-3xl font-bold">Pendidikan</span>
-                Beasiswa, literasi & peningkatan kapasitas
-              </div>
-            </div>
-
-            {/* 5 */}
-            <div className="flex items-center border rounded-md p-6">
-              <Image src="/images/icons/toilet-.png" alt="Ekonomi Icon" width={32} height={32} />
-              <div className="ml-4 flex flex-col font-medium sm:text-lg">
-                <span className="text-secondary text-2xl sm:text-3xl font-bold">Ekonomi</span>
-                Usaha mikro & penguatan livelihood
-              </div>
-            </div>
-
-            {/* 6 */}
-            <div className="flex items-center border rounded-md p-6">
-              <Image src="/images/icons/toilet-.png" alt="Sosial Dakwah Icon" width={32} height={32} />
-              <div className="ml-4 flex flex-col font-medium sm:text-lg">
-                <span className="text-secondary text-2xl sm:text-3xl font-bold">Sosial–Dakwah</span>
-                Respon bencana & layanan kemanusiaan
-              </div>
-            </div>
-
-            {/* 7 */}
-            <div className="flex items-center border rounded-md p-6">
-              <Image src="/images/icons/kitchen.png" alt="Transparansi Icon" width={32} height={32} />
-              <div className="ml-4 flex flex-col font-medium sm:text-lg">
-                <span className="text-secondary text-2xl sm:text-3xl font-bold">Transparan</span>
-                Akuntabilitas laporan & kepastian hukum
-              </div>
-            </div>
-
-            {/* 8 */}
-            <div className="flex items-center border rounded-md p-6">
-              <div className="flex-shrink-0 w-8 h-8">
-                <Image src={parkingIcon} alt="Jemput Donasi Icon" width={32} height={32} />
-              </div>
-              <div className="ml-4 flex flex-col font-medium sm:text-lg">
-                <span className="text-secondary text-2xl sm:text-3xl font-bold">Jemput Donasi</span>
-                0813-2065-8036
-              </div>
-            </div>
-
-            {/* 9 */}
-            <div className="flex items-center border rounded-md p-6">
-              <div className="flex-shrink-0 w-8 h-8">
-                <Image src={officeBuildingIcon} alt="Legalitas Icon" width={32} height={32} />
-              </div>
-              <div className="ml-4 flex flex-col font-medium sm:text-lg">
-                <span className="text-secondary text-2xl sm:text-3xl font-bold">Legalitas</span>
-                SK Menag No. 90 Tahun 2022
-              </div>
-            </div>
-
-            {/* 10 */}
-            <div className="flex items-center border rounded-md p-6">
-              <Image src="/images/icons/guard.png" alt="Sinergi Icon" width={32} height={32} />
-              <div className="ml-4 flex flex-col font-medium sm:text-lg">
-                <span className="text-secondary text-2xl sm:text-3xl font-bold">Sinergi</span>
-                Persyarikatan & komunitas untuk dampak luas
-              </div>
-            </div>
-
-            {/* 11 */}
-            <div className="flex items-center border rounded-md p-6">
-              <div className="flex-shrink-0 w-8 h-8">
-                <Image src={mosqueIcon} alt="Call Center Icon" width={32} height={32} />
-              </div>
-              <div className="ml-4 flex flex-col font-medium sm:text-lg">
-                <span className="text-secondary text-2xl sm:text-3xl font-bold">Call Center</span>
-                0852-2335-5383
-              </div>
-            </div>
-
-            {/* 12 */}
-            <div className="flex items-center border rounded-md p-6">
-              <Image src="/images/icons/guard.png" alt="Kepatuhan APU-PPT Icon" width={32} height={32} />
-              <div className="ml-4 flex flex-col font-medium sm:text-lg">
-                <span className="text-secondary text-2xl sm:text-3xl font-bold">Kepatuhan APU–PPT</span>
-                Tidak menerima dana dari kejahatan (UU 8/2010)
-              </div>
-            </div>
+          {/* 1. Program Inti */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <CoreProgram
+              emoji="📚"
+              title="Pendidikan Berdaya"
+              desc="Beasiswa, renovasi sekolah, literasi & pelatihan guru untuk generasi cerdas."
+            />
+            <CoreProgram
+              emoji="💼"
+              title="Ekonomi Produktif"
+              desc="Modal usaha mikro, pelatihan kewirausahaan & pasar yang terintegrasi."
+            />
+            <CoreProgram
+              emoji="❤️"
+              title="Sosial-Dakwah"
+              desc="Ambulans gratis, ruang ibadah, tanggap bencana & kemanusiaan cepat."
+            />
           </div>
 
+          {/* 2. Layanan Pendukung */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            <SupportCard emoji="📞" label="Call Center" sub="0852-2335-5383" />
+            <SupportCard emoji="🚚" label="Jemput Donasi" sub="Gratis" />
+            <SupportCard emoji="📜" label="Legalitas" sub="SK Menag 90/2022" />
+            <SupportCard emoji="📊" label="Transparan" sub="Laporan Real-time" />
+            <SupportCard emoji="🤝" label="Sinergi" sub="MUH & Aisyiyah" />
+            <SupportCard emoji="🛡️" label="Bebas Tindak Pidana" sub="APU-PPT" />
+          </div>
         </div>
       </div>
     </section>

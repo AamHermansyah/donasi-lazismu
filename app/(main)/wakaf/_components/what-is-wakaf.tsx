@@ -7,7 +7,7 @@ const WhatIsWakaf = () => {
       <div className="container relative z-[1]">
         {/* Header */}
         <div className="sm:text-center mb-12 max-w-5xl mx-auto">
-          <h1 className="text-3xl sm:text-5xl xl:text-6xl font-bold text-secondary">
+          <h1 className="text-3xl sm:text-5xl xl:text-5xl font-bold text-secondary">
             Gerakan Kedermawanan untuk Umat
           </h1>
           <p className="mt-4 sm:text-lg text-gray-600 sm:mx-10">

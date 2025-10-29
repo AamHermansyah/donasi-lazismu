@@ -36,10 +36,10 @@ function LoginForm() {
         />
         <div className="space-y-2">
           <h1 className="text-xl sm:text-2xl font-bold">
-            Sudah siap untuk berbuat kebaikan?
+            Siap menjadi bagian dari gerakan kebaikan?
           </h1>
           <p className="leading-5 text-gray-500 text-sm sm:text-base">
-            Masuk ke akun email anda dan mulai berwakaf untuk membantu sesama!
+            Masuk ke akun Anda dan mulai berdonasi untuk pemberdayaan umat melalui program ZISKA LAZISMU!
           </p>
         </div>
       </div>
@@ -47,7 +47,7 @@ function LoginForm() {
         <FcGoogle fontSize={20} /> Masuk dengan Google
       </Button>
       <p className="text-xs sm:text-sm leading-[18px]">
-        <b>Catatan:</b> Autentikasi ini bertujuan untuk membuat segala kegiatan wakaf menjadi transparan.
+        <b>Catatan:</b> Otentikasi ini bertujuan untuk menjamin akuntabilitas dan transparansi seluruh proses donasi dan pengelolaan ZISKA.
       </p>
     </div>
   )
