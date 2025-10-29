@@ -8,12 +8,14 @@ const WhatIsWakaf = () => {
         {/* Header */}
         <div className="sm:text-center mb-12 max-w-5xl mx-auto">
           <h1 className="text-3xl sm:text-5xl xl:text-6xl font-bold text-secondary">
-            Apa Itu Wakaf?
+            Gerakan Kedermawanan untuk Umat
           </h1>
           <p className="mt-4 sm:text-lg text-gray-600 sm:mx-10">
-            Wakaf adalah amal jariyah yang pahalanya terus mengalir tanpa henti.
-            Melalui wakaf, anda dapat memberikan manfaat yang berkelanjutan bagi
-            umat dan lingkungan sekitar.
+            LAZISMU Kabupaten Tasikmalaya hadir sebagai lembaga amil zakat nasional yang
+            mengelola <b>zakat, infak, wakaf, dan donasi kemanusiaan</b> secara{" "}
+            <span className="text-secondary font-semibold">amanah, profesional, dan transparan.</span>{" "}
+            Setiap donasi yang disalurkan menjadi bagian dari gerakan pemberdayaan umat
+            menuju masyarakat yang <b>sejahtera dan berkemajuan.</b>
           </p>
         </div>
 

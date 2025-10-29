@@ -1,64 +1,83 @@
-// components/PengurusPondok.js
-import React from 'react';
-import Image from 'next/image';
+// components/PengurusLazismu.js
+import React from "react";
+import Image from "next/image";
 
 const pengurusData = [
   {
-    nama: 'HASANURIP, S.KOM, M.M',
-    jabatan: 'KETUA',
-    imageSrc: '/images/pengurus4.jpg',
+    nama: "H. DRS. SUKISNO, MPSA",
+    jabatan: "KETUA BADAN PENGURUS",
+    imageSrc: "/images/pengurus1.jpg",
   },
   {
-    nama: 'DEZA ADYTIAR NUR ARIEF',
-    jabatan: 'SEKRETARIS',
-    imageSrc: '/images/pengurus5.jpg',
+    nama: "HASANURIP, S.KOM, M.M",
+    jabatan: "SEKRETARIS UMUM",
+    imageSrc: "/images/pengurus2.jpg",
   },
   {
-    nama: 'DRS. H. SUKISNO, MPSA',
-    jabatan: 'BENDAHARA UMUM',
-    imageSrc: '/images/pengurus6.jpg',
+    nama: "DEZA ADYTIAR NUR ARIEF",
+    jabatan: "BENDAHARA",
+    imageSrc: "/images/pengurus3.jpg",
   },
   {
-    nama: 'TYARA AHSANU GHINA',
-    jabatan: 'BENDAHARA',
-    imageSrc: '/images/pengurus7.jpg',
+    nama: "TYARA AHSANU GHINA",
+    jabatan: "KOORDINATOR PROGRAM & PENDAYAGUNAAN",
+    imageSrc: "/images/pengurus4.jpg",
+  },
+  {
+    nama: "AHMAD RIDWAN",
+    jabatan: "KOORDINATOR PENGHIMPUNAN & KEMITRAAN",
+    imageSrc: "/images/pengurus5.jpg",
+  },
+  {
+    nama: "NURUL HUDA, S.PD.I",
+    jabatan: "KOORDINATOR ADMINISTRASI & KEUANGAN",
+    imageSrc: "/images/pengurus6.jpg",
   },
 ];
 
-const PengurusPondok = () => {
+const PengurusLazismu = () => {
   return (
-    <section id="pengurus-pondok" className="py-4 sm:py-12 bg-white">
+    <section id="pengurus-lazismu" className="py-4 sm:py-12 bg-white">
       <div className="container mx-auto px-4">
+        {/* Header - jangan diubah desainnya */}
         <div className="text-center mt-10 pb-4">
           <h1 className="text-secondary text-3xl sm:text-5xl xl:text-6xl font-bold">
-            Pengurus Pondok
+            Pengurus LAZISMU 
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-            Para pengurus pondok adalah orang-orang yang berkomitmen untuk memberikan yang terbaik dalam mendukung pendidikan dan kehidupan santri di Pesantren Mahasiswa Al-Ihsan Tasikmalaya.
+            Para pengurus LAZISMU Kabupaten Tasikmalaya adalah insan-insan
+            <b> amanah, profesional, dan berdedikasi</b> yang berkhidmat dalam
+            mengelola zakat, infak, dan wakaf untuk <b>pemberdayaan umat</b>.
+            Mereka bekerja dengan semangat sinergi dan transparansi untuk
+            mewujudkan kesejahteraan masyarakat.
           </p>
         </div>
-        <ul className="w-full flex flex-wrap justify-center gap-x-10 gap-y-2 mt-4 sm:mt-12">
-          {
-            pengurusData.map((item, idx) => (
-              <li key={idx} className="p-4 space-y-4 flex-1">
-                <div className="w-24 aspect-square mx-auto">
-                  <img
-                    src="https://picsum.photos/id/83/900/450"
-                    className="w-full h-full rounded-full"
-                    alt=""
-                  />
-                </div>
-                <div className="text-center">
-                  <h4 className="text-gray-700 font-semibold sm:text-lg whitespace-nowrap">{item.nama}</h4>
-                  <p className="text-secondary">{item.jabatan}</p>
-                </div>
-              </li>
-            ))
-          }
+
+        {/* Grid pengurus */}
+        <ul className="w-full flex flex-wrap justify-center gap-x-10 gap-y-6 mt-4 sm:mt-12">
+          {pengurusData.map((item, idx) => (
+            <li key={idx} className="p-4 space-y-4 flex-1 max-w-[180px]">
+              <div className="w-24 aspect-square mx-auto rounded-full overflow-hidden">
+                <Image
+                  src={item.imageSrc}
+                  alt={item.nama}
+                  width={120}
+                  height={120}
+                  className="object-cover rounded-full"
+                />
+              </div>
+              <div className="text-center">
+                <h4 className="text-gray-700 font-semibold sm:text-lg">
+                  {item.nama}
+                </h4>
+                <p className="text-secondary text-sm">{item.jabatan}</p>
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
     </section>
   );
 };
 
-export default PengurusPondok;
+export default PengurusLazismu;

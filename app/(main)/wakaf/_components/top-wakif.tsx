@@ -18,18 +18,19 @@ const TopWakifGrid = async () => {
   return (
     <div className="container mx-auto space-y-4 sm:space-y-8">
       <h1 className="sm:text-center text-3xl sm:text-5xl xl:text-6xl font-bold text-secondary">
-        Top 10 Terbaru Wakif
+        Top 10 Donatur Terbaru
       </h1>
       <p className="md:text-center xl:text-lg text-justify max-w-5xl mx-auto">
-        Ini dibuat untuk memberikan apresiasi kepada para wakif yang telah berkontribusi dalam periode terbaru.
-        Kami menghargai setiap sumbangan yang diberikan dan berharap dapat terus mendorong lebih banyak orang untuk berpartisipasi
-        dalam kegiatan wakaf yang berkelanjutan.
+        Apresiasi untuk para <b>donatur</b> yang telah berpartisipasi
+        melalui <b>zakat, infak, dan wakaf</b>. Setiap donasi dikelola secara
+        <span className="text-secondary font-semibold"> amanah, profesional, dan transparan</span>{' '}
+        untuk menghadirkan kemanfaatan nyata bagi pendidikan, ekonomi, dan sosial–dakwah.
       </p>
       <Table>
         <TableHead>
           <TableHeadCol className="rounded-l-lg">Top</TableHeadCol>
           <TableHeadCol>Nama</TableHeadCol>
-          <TableHeadCol align="right" className="rounded-r-lg">Total Wakaf</TableHeadCol>
+          <TableHeadCol align="right" className="rounded-r-lg">Total Donasi</TableHeadCol>
         </TableHead>
         <TableBody className="text-gray-700">
           {data.rank.map((wakif, index) => (

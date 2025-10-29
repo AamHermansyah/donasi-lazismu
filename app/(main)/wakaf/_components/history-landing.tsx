@@ -9,10 +9,13 @@ const HistoryLanding = async () => {
   return (
     <div className="container mx-auto flex flex-col justify-center space-y-4 sm:space-y-8 mt-10">
       <h1 className="sm:text-center text-3xl sm:text-5xl xl:text-6xl font-bold text-secondary">
-        Penyaluran Wakaf Terbaru
+        Penyaluran Donasi Terbaru
       </h1>
       <p className="md:text-center xl:text-lg text-justify max-w-5xl mx-auto">
-        Memberikan gambaran penyaluran wakaf dalam 30 hari terakhir serta transparansi dalam penyaluran dana dan anggaran wakaf di lingkungan Pondok Pesantren Mahasiswa Al-Ihsan tasikmalaya.
+      Menampilkan laporan penyaluran <b>zakat, infak, sedekah, dan wakaf</b> oleh
+      LAZISMU Kabupaten Tasikmalaya dalam 30 hari terakhir. Setiap donasi yang
+      diterima dikelola secara <span className="text-secondary font-semibold">amanah, transparan, dan berdampak</span> untuk mendukung
+      program pendidikan, ekonomi, dan sosial kemanusiaan.
       </p>
       <div className="pt-4">
         <ol className="relative border-s border-gray-200 max-w-5xl mx-auto">

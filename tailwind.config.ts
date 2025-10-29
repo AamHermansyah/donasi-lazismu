@@ -53,8 +53,8 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         theme : {
-          DEFAULT : "#1DBBB4",
-          secondary : "#0D716C",
+          DEFAULT : "#ff7924",
+          secondary : "#D9621F",
         },
       },
       borderRadius: {

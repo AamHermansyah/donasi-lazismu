@@ -10,23 +10,23 @@ import { ADMIN_EMAIL } from "@/lib/constants";
 
 const ContactUs = () => {
   const contactMethods = [
-    {
-      icon:
-        <MdOutlineMail fontSize={24} />
-      ,
-      contact: ADMIN_EMAIL
-    },
+    // {
+    //   icon:
+    //     <MdOutlineMail fontSize={24} />
+    //   ,
+    //   contact: ADMIN_EMAIL
+    // },
     {
       icon:
         <MdOutlinePhone fontSize={24} />
       ,
-      contact: "+62 (82) 316-126-449"
+      contact: "+62 (85) 223-355-383"
     },
     {
       icon:
         <CiLocationOn fontSize={24} />
       ,
-      contact: "Jl. R.E. Martadinata Panyingkiran No.224 Kota Tasikmalaya"
+      contact: "Jl. Sukahaji Singasari Singaparna Kabupaten Tasikmalaya 46412"
     },
   ]
 

@@ -31,7 +31,7 @@ const Navbar: React.FC<IProps> = ({ isAuthenticated }) => {
           <div className="hidden lg:flex items-center gap-12">
             <nav className="flex gap-6">
               <Link href="/">Beranda</Link>
-              <Link href="/wakaf">Wakaf</Link>
+              <Link href="/wakaf">Donasi</Link>
               <Link href="/#about">Tentang Kami</Link>
               <Link href="/#contact">Kontak</Link>
             </nav>

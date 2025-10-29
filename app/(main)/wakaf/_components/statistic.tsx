@@ -13,12 +13,15 @@ const Statistic = async () => {
       <div className="relative overflow-hidden space-y-4 sm:space-y-8">
         <div className="container mx-auto space-y-4 sm:space-y-8">
           <h1 className="sm:text-center text-3xl sm:text-5xl xl:text-6xl font-bold text-secondary">
-            Data Pemasukan Wakaf Uang
+            Data Pemasukan Donasi
           </h1>
           <p className="md:text-center xl:text-lg text-justify max-w-5xl mx-auto">
-            Melalui grafik ini, data pemasukan wakaf uang menjadi transparansi dalam pengelolaan wakaf. Setiap transaksi
-            dan alokasi dana dapat dilacak, serta memberikan kepercayaan dan keamanan bagi
-            para donatur dan penerima manfaat.
+          Melalui grafik ini, LAZISMU Kabupaten Tasikmalaya menampilkan data pemasukan
+          <b> zakat, infak, sedekah, dan wakaf </b> secara terbuka. Setiap transaksi dan
+          alokasi dana dicatat dengan sistem yang <span className="text-secondary font-semibold">
+          transparan dan akuntabel
+          </span>, sehingga masyarakat dapat memantau penggunaan donasi dengan rasa
+          percaya dan aman.
           </p>
         </div>
         <div className="px-4 sm:container mx-auto">

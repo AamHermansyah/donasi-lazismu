@@ -17,7 +17,7 @@ const OurPlatform = () => {
           <div className="flex border-2 p-4 sm:p-10 flex-col sm:gap-4 z-[1]">
             <p className=" text-sm xl:text-lg text-justify">
               Website kami telah menggunakan teknologi blockchain untuk
-              memastikan pengelolaan wakaf yang <span className="text-secondary font-bold">transparan dan akuntabel. </span>
+              memastikan pengelolaan donasi yang <span className="text-secondary font-bold">transparan dan akuntabel. </span>
               Berikut adalah keunggulan yang kami tawarkan:
             </p>
 
@@ -28,17 +28,20 @@ const OurPlatform = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   Penerapan teknologi blockchain memastikan bahwa setiap
-                  transaksi wakaf tercatat secara transparan dan dapat diaudit.
+                  donasi yang diterima tercatat secara transparan dan dapat diaudit.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
                 <AccordionTrigger>Menggunakan Payment Gateway</AccordionTrigger>
                 <AccordionContent>
-                  Memanfaatkan payment gateway untuk memudahkan dalam melakukan serah terima wakaf secara real-time.
+                Sistem pembayaran kami terhubung dengan payment gateway untuk
+                  memudahkan donatur melakukan transaksi secara cepat, aman, dan
+                  real-time baik melalui transfer bank, e-wallet, maupun kartu
+                  digital.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger>Ekosistem Wakaf Digital</AccordionTrigger>
+                <AccordionTrigger>Ekosistem Donasi Digital</AccordionTrigger>
                 <AccordionContent>
                   Menyediakan platform digital yang mendukung penggalangan dana
                   dan redistribusi kekayaan secara adil dan efisien.
@@ -47,7 +50,7 @@ const OurPlatform = () => {
               <AccordionItem value="item-4">
                 <AccordionTrigger>Mendapatkan Sertifikat</AccordionTrigger>
                 <AccordionContent>
-                  Setelah menyelesaikan serah terima wakaf. Pengguna akan mendapatkan sertifikat dengan teknologi blockchain untuk keamanan dan transparansi data.
+                  Setelah menyelesaikan serah terima donasi. Pengguna akan mendapatkan sertifikat dengan teknologi blockchain untuk keamanan dan transparansi data.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

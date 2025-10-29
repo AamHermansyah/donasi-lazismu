@@ -12,7 +12,7 @@ const Footer = () => {
     },
     {
       href: '/wakaf',
-      name: 'Wakaf'
+      name: 'Donasi'
     },
     {
       href: '/#about',
@@ -36,11 +36,13 @@ const Footer = () => {
             />
           </div>
           <p>
-            Pondok Pesantren Al-Ihsan Tasikmalaya dengan fokus pada kajian kitab, tahfidz Quran, dan pengembangan softskill serta hardskill.
+          LAZISMU Kabupaten Tasikmalaya berkhidmat dalam pengelolaan zakat, infak,
+    dan wakaf secara <b>amanah, profesional, dan transparan</b> untuk
+    pemberdayaan masyarakat menuju kesejahteraan dan keadilan sosial.
           </p>
           <div className="items-center justify-center gap-x-3 flex">
             <Button variant="secondary">
-              Mari berwakaf
+              Mari berdonasi
             </Button>
             <Button variant="outline" className="gap-2">
               Tentang Kami <FaArrowRightLong />
@@ -48,7 +50,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-10 py-10 border-t items-center justify-between sm:flex">
-          <p>© 2024 PPM Al-Ihsan Tasik. All rights reserved.</p>
+          <p>© 2025 Lazismu Kabupaten Tasikmalaya. All rights reserved.</p>
           <ul className="flex flex-wrap items-center gap-4 mt-6 sm:text-sm sm:mt-0">
             {
               footerNavs.map((item, idx) => (
