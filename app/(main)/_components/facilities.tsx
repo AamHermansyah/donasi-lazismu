@@ -65,13 +65,13 @@ const Facilities = () => {
         {/* Gallery tetap */}
         <div className="w-full grid grid-cols-12 gap-2 sm:gap-4 mt-12">
           <div className="relative w-full aspect-video sm:aspect-[4/3] rounded-lg overflow-hidden col-span-12 sm:col-span-7 sm:row-span-2">
-            <Image src="/images/dummy.jpg" alt="Gallery image 2" fill className="object-cover" />
+            <Image src="/images/fasilitas-infaq.jpg" alt="Gallery image 2" fill className="object-cover" />
           </div>
           <div className="relative w-full aspect-video sm:aspect-auto h-full col-span-12 sm:col-span-5 rounded-lg overflow-hidden">
-            <Image src="/images/dummy.jpg" alt="Gallery image 2" fill className="object-cover" />
+            <Image src="/images/fasilitas-zakat.jpg" alt="Gallery image 2" fill className="object-cover" />
           </div>
           <div className="relative w-full aspect-video sm:aspect-auto h-full col-span-12 sm:col-span-5 rounded-lg overflow-hidden">
-            <Image src="/images/dummy.jpg" alt="Gallery image 3" fill className="object-cover" />
+            <Image src="/images/fasilitas-perusahaan.jpg" alt="Gallery image 3" fill className="object-cover" />
           </div>
         </div>
 

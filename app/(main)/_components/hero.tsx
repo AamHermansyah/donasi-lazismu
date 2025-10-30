@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
@@ -34,9 +35,13 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex-1 text-center mt-4 rounded-lg overflow-hidden">
-        <img
-          src="https://picsum.photos/id/83/1600/900"
+        <Image
+          src="/images/respon-muhammadiyah.png"
+          alt="Respon Muhammadiyah"
+          width={600}
+          height={400}
           className="w-full h-full object-cover"
+          priority
         />
       </div>
     </section>

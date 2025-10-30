@@ -20,10 +20,17 @@ const AboutUs = () => {
       </div>
       <div className="relative container flex flex-col lg:flex-row items-center gap-10 sm:gap-16">
         <div className="relative flex-1 w-full aspect-[4/3] rounded-md overflow-hidden">
-          <img
+          {/* <img
             src="https://picsum.photos/id/83/1600/900"
             alt="Mosque Image"
             className="object-cover h-full"
+          /> */}
+          <Image
+          src="/images/postingan-kantor.png"
+          alt="Respon Muhammadiyah"
+          fill={true}
+          className="h-full object-cover"
+          priority
           />
         </div>
         <div className="space-y-6 max-w-lg lg:max-w-none flex-1">

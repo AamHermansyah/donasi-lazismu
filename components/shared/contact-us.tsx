@@ -40,7 +40,7 @@ const ContactUs = () => {
             </h2>
 
             <div className="flex-1 text-center mt-4 rounded-lg overflow-hidden">
-              <img src="https://picsum.photos/id/83/1600/900" className="w-full aspect-video" />
+              <img src="https://lazismubojonegoro.org/wp-content/uploads/2022/12/lembaga-amil-zakat-infaq-infak-dan-sedekah-sadaqah-muhammadiyah-bojonegoro-lazismu-banner-halaman-1024x569-1.jpg" className="w-full aspect-video" />
             </div>
 
             <div className="pt-4">
