@@ -28,8 +28,8 @@ const LeaderboardWakif = async () => {
         <TableHeadCol className="rounded-l-lg">Top</TableHeadCol>
         <TableHeadCol>Nama</TableHeadCol>
         <TableHeadCol align="right">Total</TableHeadCol>
-        <TableHeadCol align="right">Wakaf Terbesar</TableHeadCol>
-        <TableHeadCol align="right" className="rounded-r-lg">Total Wakaf</TableHeadCol>
+        <TableHeadCol align="right">Donasi Terbesar</TableHeadCol>
+        <TableHeadCol align="right" className="rounded-r-lg">Total Donasi</TableHeadCol>
       </TableHead>
       <TableBody className="text-gray-700">
         {data.rank.length > 0 ? (

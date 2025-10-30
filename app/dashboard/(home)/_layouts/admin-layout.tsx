@@ -10,7 +10,7 @@ const AdminLayout = async () => {
     <div>
       <AdminOverview />
       <div className="w-full rounded-xl p-4 bg-background mt-4 shadow-sm">
-        <h1 className="text-lg sm:text-xl font-semibold">Pemasukan Wakaf 1 Tahun Terakhir</h1>
+        <h1 className="text-lg sm:text-xl font-semibold">Pemasukan Donasi 1 Tahun Terakhir</h1>
         <IncomeChart data={chartData} label="Pemasukan" />
       </div>
     </div>

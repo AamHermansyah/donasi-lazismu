@@ -162,7 +162,7 @@ function DataTable({ data, limit }: IProps) {
             <TableHeadCol className="rounded-l-lg">Kampanye</TableHeadCol>
             <TableHeadCol>Status</TableHeadCol>
             <TableHeadCol>Kategori</TableHeadCol>
-            <TableHeadCol className="text-right">Total Wakif</TableHeadCol>
+            <TableHeadCol className="text-right">Total Donatur</TableHeadCol>
             <TableHeadCol className="text-right">Target</TableHeadCol>
             <TableHeadCol>Publikasi</TableHeadCol>
             <TableHeadCol className="text-center rounded-r-lg">Aksi</TableHeadCol>

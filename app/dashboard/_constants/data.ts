@@ -40,13 +40,13 @@ export const sidebarNavItems: SidebarNavItems[] = [
   {
     href: "/dashboard/wakaf-transaction",
     icon: PiHandCoins,
-    text: "Serah Terima Wakaf",
+    text: "Serah Terima Donasi",
     role: 'ADMIN'
   },
   {
     href: "/dashboard/withdraw",
     icon: BsCashCoin,
-    text: "Saldo Wakaf",
+    text: "Saldo Donasi",
     role: 'ADMIN'
   },
   {
@@ -61,7 +61,7 @@ export const sidebarNavItems: SidebarNavItems[] = [
   {
     href: "/dashboard/berwakaf",
     icon: LiaDonateSolid,
-    text: "Berwakaf",
+    text: "Berdonasi",
     role: 'USER'
   },
   {

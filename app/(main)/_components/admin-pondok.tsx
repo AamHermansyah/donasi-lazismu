@@ -4,34 +4,34 @@ import Image from "next/image";
 
 const pengurusData = [
   {
-    nama: "H. DRS. SUKISNO, MPSA",
+    nama: "Nama Ketua",
     jabatan: "KETUA BADAN PENGURUS",
-    imageSrc: "/images/pengurus1.jpg",
+    imageSrc: "/images/dummy.jpg",
   },
   {
-    nama: "HASANURIP, S.KOM, M.M",
+    nama: "Nama Sekretaris",
     jabatan: "SEKRETARIS UMUM",
-    imageSrc: "/images/pengurus2.jpg",
+    imageSrc: "/images/dummy.jpg",
   },
   {
-    nama: "DEZA ADYTIAR NUR ARIEF",
+    nama: "Nama Bendahara",
     jabatan: "BENDAHARA",
-    imageSrc: "/images/pengurus3.jpg",
+    imageSrc: "/images/dummy.jpg",
   },
   {
-    nama: "TYARA AHSANU GHINA",
+    nama: "Nama Koordinator 1",
     jabatan: "KOORDINATOR PROGRAM & PENDAYAGUNAAN",
-    imageSrc: "/images/pengurus4.jpg",
+    imageSrc: "/images/dummy.jpg",
   },
   {
-    nama: "AHMAD RIDWAN",
+    nama: "Nama Koordinator 2",
     jabatan: "KOORDINATOR PENGHIMPUNAN & KEMITRAAN",
-    imageSrc: "/images/pengurus5.jpg",
+    imageSrc: "/images/dummy.jpg",
   },
   {
-    nama: "NURUL HUDA, S.PD.I",
+    nama: "Nama Koordinator 3",
     jabatan: "KOORDINATOR ADMINISTRASI & KEUANGAN",
-    imageSrc: "/images/pengurus6.jpg",
+    imageSrc: "/images/dummy.jpg",
   },
 ];
 
@@ -63,7 +63,7 @@ const PengurusLazismu = () => {
                   alt={item.nama}
                   width={120}
                   height={120}
-                  className="object-cover rounded-full"
+                  className="object-cover rounded-full h-full"
                 />
               </div>
               <div className="text-center">

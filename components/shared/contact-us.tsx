@@ -10,12 +10,12 @@ import { ADMIN_EMAIL } from "@/lib/constants";
 
 const ContactUs = () => {
   const contactMethods = [
-    // {
-    //   icon:
-    //     <MdOutlineMail fontSize={24} />
-    //   ,
-    //   contact: ADMIN_EMAIL
-    // },
+    {
+      icon:
+        <MdOutlineMail fontSize={24} />
+      ,
+      contact: ADMIN_EMAIL
+    },
     {
       icon:
         <MdOutlinePhone fontSize={24} />

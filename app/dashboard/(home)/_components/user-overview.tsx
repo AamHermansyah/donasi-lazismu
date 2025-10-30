@@ -18,17 +18,17 @@ async function UserOverview({ userId }: IProps) {
     <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <CardOverview
         Icon={BsCurrencyDollar}
-        title="Total Wakaf"
+        title="Total Donasi"
         value={formatRupiah(data.wakaf)}
       />
       <CardOverview
         Icon={PiChartLineUp}
-        title="Wakaf Terbesar"
+        title="Donasi Terbesar"
         value={formatRupiah(data.largestWakaf)}
       />
       <CardOverview
         Icon={FaHandHoldingUsd}
-        title="Jumlah Berwakaf"
+        title="Jumlah Berdonasi"
         value={`${data.berwakaf}x`}
       />
       <CardOverview

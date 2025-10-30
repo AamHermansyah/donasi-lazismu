@@ -60,8 +60,8 @@ function SidebarMain({ role }: IProps) {
                 />
               </Link>
               <div className="flex flex-col">
-                <h1 className="text-sm leading-4 font-semibold text-secondary">PPM Al Ihsan</h1>
-                <span className="inline-block text-xs">Tasikmalaya</span>
+                <h1 className="text-sm leading-4 font-semibold text-secondary">Lazismu</h1>
+                <span className="inline-block text-xs">Kab. Tasikmalaya</span>
               </div>
             </div>
             <div className="flex flex-col justify-between flex-1 mt-6">

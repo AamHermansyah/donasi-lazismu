@@ -9,8 +9,8 @@ const nunito = Nunito({
 })
 
 export const metadata: Metadata = {
-  title: 'Pondok Pesantren Mahasiswa Al-Ihsan Tasikmalaya',
-  description: 'Memberikana layanan kemudahan dalam pendistribusikan wakaf secara transparan dan aman pada Pondok Pesantren Al-Ihsan Tasikmalya dengan melakukan difusi teknologi informasi berbasis blockchain. ',
+  title: 'LAZISMU Kabupaten Tasikmalaya',
+  description: 'Mempersembahkan layanan donasi ZISKA (Zakat, Infak, Sedekah, Wakaf) yang mudah, aman, dan transparan melalui adopsi teknologi blockchain. Mewujudkan pemberdayaan umat LAZISMU.',
 }
 
 export default function RootLayout({

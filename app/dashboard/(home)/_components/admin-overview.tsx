@@ -20,7 +20,7 @@ async function AdminOverview() {
       />
       <CardOverview
         Icon={FaHandHoldingUsd}
-        title="Pengguna Berwakaf"
+        title="Pengguna Berdonasi"
         value={`${numberPrefixer(data.berwakafCount || 0)}x`}
       />
       <CardOverview
@@ -32,7 +32,7 @@ async function AdminOverview() {
       />
       <CardOverview
         Icon={BsCurrencyDollar}
-        title="Wakaf tersedia"
+        title="Donasi tersedia"
         value={`Rp ${numberPrefixer(data.availableBalance || 0, 2)}`}
       />
       <CardOverview
