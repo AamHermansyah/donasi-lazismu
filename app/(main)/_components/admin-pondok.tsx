@@ -20,17 +20,17 @@ const pengurusData = [
   },
   {
     nama: "Nama Koordinator 1",
-    jabatan: "KOORDINATOR PROGRAM & PENDAYAGUNAAN",
+    jabatan: "KOOR. PROGRAM & PENDAYAGUNAAN",
     imageSrc: "/images/dummy.jpg",
   },
   {
     nama: "Nama Koordinator 2",
-    jabatan: "KOORDINATOR PENGHIMPUNAN & KEMITRAAN",
+    jabatan: "KOOR. PENGHIMPUNAN & KEMITRAAN",
     imageSrc: "/images/dummy.jpg",
   },
   {
     nama: "Nama Koordinator 3",
-    jabatan: "KOORDINATOR ADMINISTRASI & KEUANGAN",
+    jabatan: "KOOR. ADMINISTRASI & KEUANGAN",
     imageSrc: "/images/dummy.jpg",
   },
 ];
@@ -42,7 +42,7 @@ const PengurusLazismu = () => {
         {/* Header - jangan diubah desainnya */}
         <div className="text-center mt-10 pb-4">
           <h1 className="text-secondary text-3xl sm:text-5xl xl:text-6xl font-bold">
-            Pengurus LAZISMU 
+            Pengurus LAZISMU
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto mt-4">
             Para pengurus LAZISMU Kabupaten Tasikmalaya adalah insan-insan
@@ -54,9 +54,9 @@ const PengurusLazismu = () => {
         </div>
 
         {/* Grid pengurus */}
-        <ul className="w-full flex flex-wrap justify-center gap-x-10 gap-y-6 mt-4 sm:mt-12">
+        <ul className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center gap-4 mt-4 sm:mt-12">
           {pengurusData.map((item, idx) => (
-            <li key={idx} className="p-4 space-y-4 flex-1 max-w-[180px]">
+            <li key={idx} className="p-4 space-y-4">
               <div className="w-24 aspect-square mx-auto rounded-full overflow-hidden">
                 <Image
                   src={item.imageSrc}

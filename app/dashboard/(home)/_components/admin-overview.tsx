@@ -27,8 +27,6 @@ async function AdminOverview() {
         Icon={BsCashCoin}
         title="Pemasukan bulan ini"
         value={formatRupiah(data.monthlyIncome.amount)}
-        percentage={data.monthlyIncome.percentageChange}
-        percentageLabel="dari bulan kemarin"
       />
       <CardOverview
         Icon={BsCurrencyDollar}
