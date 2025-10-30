@@ -230,7 +230,7 @@ const Profile: React.FC<IProps> = ({ data }) => {
                     <SelectItem value="masyarakat">Masyarakat</SelectItem>
                     <SelectItem value="mahasiswa">Mahasiswa</SelectItem>
                     <SelectItem value="pengurus" disabled={data.role === 'USER'}>
-                      Pengurus Pondok Pesantren
+                      Pengurus Lazismu
                     </SelectItem>
                   </SelectContent>
                 </Select>

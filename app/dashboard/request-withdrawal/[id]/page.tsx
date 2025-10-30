@@ -31,7 +31,7 @@ async function WithdrawPage({ params }: { params: IParams }) {
   return (
     <div className="space-y-4">
       {withdrawalRequest.status === 'PENDING' && (
-        <div className="bg-gradient-to-r from-secondary to-emerald-400 p-10 text-center rounded-lg">
+        <div className="bg-gradient-to-r from-blue-500 to-emerald-400 p-10 text-center rounded-lg">
           <h1 className="text-xl sm:text-2xl font-bold text-white mb-2">
             {user!.role !== 'SUPER_ADMIN' ?
               'Terima kasih!' :

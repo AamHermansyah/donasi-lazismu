@@ -87,7 +87,7 @@ function Statements({ data, limit, userId }: IProps) {
         <TableHead>
           <TableHeadCol className="rounded-l-lg">Tanggal</TableHeadCol>
           <TableHeadCol>Judul Kampanye</TableHeadCol>
-          <TableHeadCol>Wakaf</TableHeadCol>
+          <TableHeadCol>Donasi</TableHeadCol>
           <TableHeadCol align="center" className="rounded-r-lg">Aksi</TableHeadCol>
         </TableHead>
         <TableBody className="text-gray-700">

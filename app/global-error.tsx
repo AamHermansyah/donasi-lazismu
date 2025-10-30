@@ -27,8 +27,8 @@ export default function GlobalError({
                     />
                   </Link>
                   <div className="flex flex-col">
-                    <h1 className="leading-4 font-semibold text-secondary">PPM Al Ihsan</h1>
-                    <span className="inline-block text-sm">Tasikmalaya</span>
+                    <h1 className="leading-4 font-semibold text-secondary">Lazismu</h1>
+                    <span className="inline-block text-sm">Kab. Tasikmalaya</span>
                   </div>
                 </div>
               </div>

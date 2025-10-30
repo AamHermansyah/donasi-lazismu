@@ -57,10 +57,10 @@ export async function POST(req: Request, { params }: { params: IParams }) {
     await db.notification.create({
       data: {
         userId: body.userId,
-        title: 'Verifikasi wakaf berhasil',
+        title: 'Verifikasi donasi berhasil',
         type: 'VERIFIED',
         message: `
-          Selamat wakaf anda pada kampanye 
+          Selamat donasi anda pada kampanye 
           <b>${campaign.title}</b> 
           dengan nominal ${formatRupiah(transaction.amount)} telah berhasil diverifikasi. 
           anda mendapatkan surat pernyataan resmi dengan klik tombol 
@@ -76,7 +76,7 @@ export async function POST(req: Request, { params }: { params: IParams }) {
     });
 
   } catch (error: any) {
-    console.log('POST VERIFIED WAKAF TRANSACTION ERROR: ', error);
+    console.log('POST VERIFIED DONATION TRANSACTION ERROR: ', error);
     return new NextResponse('Internal Error', { status: 500 });
   }
 }

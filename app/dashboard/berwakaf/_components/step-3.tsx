@@ -37,7 +37,7 @@ const Step3 = forwardRef<HTMLDivElement, IProps>(({ onChange, data }, ref) => {
         }}
       />
       <div className="flex items-center justify-between gap-2">
-        <Label htmlFor="hidden-name" className="text-xs sm:text-sm">Sembunyikan nama (wakif anonim)</Label>
+        <Label htmlFor="hidden-name" className="text-xs sm:text-sm">Sembunyikan nama (donatur anonim)</Label>
         <Switch
           id="hidden-name"
           defaultChecked={data.isHiddenName}

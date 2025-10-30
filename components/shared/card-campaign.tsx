@@ -52,7 +52,7 @@ const CardCampaign = forwardRef<HTMLDivElement, IProps>(({ className, data, only
             </span>
           </div>
           <div className="text-right">
-            <h4 className="text-xs leading-3">Wakif</h4>
+            <h4 className="text-xs leading-3">Donatur</h4>
             <span className="block font-semibold text-xs sm:text-sm">
               {data.numberOfWakif}
             </span>

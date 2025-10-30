@@ -170,7 +170,7 @@ function DataTable({ data, limit }: IProps) {
       <div className="p-4 rounded-lg bg-background mt-4">
         <Table>
           <TableHead>
-            <TableHeadCol className="rounded-l-lg">Wakif</TableHeadCol>
+            <TableHeadCol className="rounded-l-lg">Donatur</TableHeadCol>
             <TableHeadCol className="text-right">Jumlah Donasi</TableHeadCol>
             <TableHeadCol>Status</TableHeadCol>
             <TableHeadCol className="min-w-[150px]">Kampanye Tujuan</TableHeadCol>

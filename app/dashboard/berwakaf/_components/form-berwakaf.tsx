@@ -156,7 +156,7 @@ function FormBerwakaf({ data, initialForm, user, campaignId }: IProps) {
 
   return (
     <div className="w-full bg-background p-4 sm:p-6 rounded-xl shadow-sm space-y-2">
-      <h2 className="text-lg font-bold text-secondary">Mari Berwakaf</h2>
+      <h2 className="text-lg font-bold text-secondary">Mari Berdonasi</h2>
       <StepHeader data={steps} />
       <div className="w-full overflow-x-hidden">
         <div

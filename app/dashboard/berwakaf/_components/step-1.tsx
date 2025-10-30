@@ -87,7 +87,7 @@ const Step1 = forwardRef<HTMLDivElement, IProps>(({ onChange }, ref) => {
         ))}
       </div>
       <div className="border p-4 rounded-lg space-y-2">
-        <h2>Nominal wakaf lainnya</h2>
+        <h2>Nominal donasi lainnya</h2>
         <label className="relative block bg-gray-100 rounded-md">
           <span className="absolute left-4 top-[50%] -translate-y-[50%] font-extrabold text-lg sm:text-xl">
             Rp
@@ -105,7 +105,7 @@ const Step1 = forwardRef<HTMLDivElement, IProps>(({ onChange }, ref) => {
           />
         </label>
         <span className="block text-xs font-semibold text-gray-400">
-          Minimal wakaf sebesar Rp20.000<sup>*</sup>
+          Minimal donasi sebesar Rp20.000<sup>*</sup>
         </span>
       </div>
     </div>

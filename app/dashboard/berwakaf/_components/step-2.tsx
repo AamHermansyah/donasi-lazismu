@@ -29,7 +29,7 @@ const Step2 = forwardRef<HTMLDivElement, IProps>(({ onChange }, ref) => {
     <div ref={ref} className="flex-1 space-y-4">
       <div className="flex items-center gap-2">
         <span className="block px-4 py-1 rounded-full text-sm font-semibold bg-secondary/20 text-secondary">2</span>
-        <h1 className="text-lg font-bold">Pilih metode wakaf</h1>
+        <h1 className="text-lg font-bold">Pilih metode donasi</h1>
       </div>
       {paymentMethods.map((category, index) => (
         <div key={index} className="space-y-1">

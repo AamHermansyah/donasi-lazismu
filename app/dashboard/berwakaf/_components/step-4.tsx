@@ -73,7 +73,7 @@ const Step4 = forwardRef<HTMLDivElement, IProps>(({ data, user, onChangeStep }, 
       </div>
       <Separator />
       <div className="space-y-2 text-sm sm:text-base">
-        <h1 className="font-bold">Detail Wakaf</h1>
+        <h1 className="font-bold">Detail Donasi</h1>
         <div className="flex items-center justify-between gap-2">
           <span className="font-semibold text-gray-400">Atas Nama</span>
           <span className="font-bold text-right">
@@ -105,7 +105,7 @@ const Step4 = forwardRef<HTMLDivElement, IProps>(({ data, user, onChangeStep }, 
       <Separator />
       <div className="space-y-1">
         <p className="text-xs">
-          <b><sup>*</sup>Catatan:</b> Kamu akan mendapatkan <b>sertifikat</b> wakaf setelah berhasil melakukan wakaf.
+          <b><sup>*</sup>Catatan:</b> Kamu akan mendapatkan <b>sertifikat</b> donasi setelah berhasil melakukan donasi.
         </p>
         <p className="text-xs">
           <b><sup>*</sup>Penting:</b> Terdapat <b>biaya admin</b> pada saat transaksi berlangsung karena adanya <b>pihak ketiga</b> untuk melakukan transaksi.

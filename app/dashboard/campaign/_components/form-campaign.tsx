@@ -62,12 +62,12 @@ function FormCampaign(props: PropTypes) {
         const numericValue = parseFloat(price);
         return !isNaN(numericValue) && numericValue >= WITHDRAW_MINIMAL;
       }, {
-        message: "Target wakaf harus sama dengan atau lebih dari Rp100.000.",
+        message: "Target donasi harus sama dengan atau lebih dari Rp100.000.",
       })
       .refine((price) => {
         return (mode === 'create') || (+price >= props.data.collected);
       }, {
-        message: "Target wakaf harus lebih dari wakaf terkumpul",
+        message: "Target donasi harus lebih dari donasi terkumpul",
       })
       .refine((price) => {
         if (mode === 'create' || props.data.availableBalance >= WITHDRAW_MINIMAL) return true;
@@ -75,7 +75,7 @@ function FormCampaign(props: PropTypes) {
         return +price >= collected + (WITHDRAW_MINIMAL - availableBalance);
       }, {
         message: mode === 'edit' ?
-          `Target wakaf harus lebih dari ${formatRupiah(props.data.collected + (WITHDRAW_MINIMAL - props.data.availableBalance) - 1)}`
+          `Target donasi harus lebih dari ${formatRupiah(props.data.collected + (WITHDRAW_MINIMAL - props.data.availableBalance) - 1)}`
           : 'Invalid input',
       })
   });
@@ -257,7 +257,7 @@ function FormCampaign(props: PropTypes) {
                     />
                   </FormControl>
                   <FormDescription>
-                    Judul kampanye harus jelas dan mudah dipahami wakif.
+                    Judul kampanye harus jelas dan mudah dipahami donatur.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -431,7 +431,7 @@ function FormCampaign(props: PropTypes) {
               name="target"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-semibold">Target Wakaf</FormLabel>
+                  <FormLabel className="font-semibold">Target Donasi</FormLabel>
                   <FormControl>
                     <div className="relative">
                       <Input
@@ -452,8 +452,8 @@ function FormCampaign(props: PropTypes) {
                   </FormControl>
                   <FormDescription>
                     {mode === 'create' ?
-                      'Target wakaf harus sesuai dengan kebutuhan masalah.' :
-                      `Target harus lebih dari wakaf yang sudah terkumpul (${formatRupiah(props.data.collected)}).`
+                      'Target donasi harus sesuai dengan kebutuhan masalah.' :
+                      `Target harus lebih dari donasi yang sudah terkumpul (${formatRupiah(props.data.collected)}).`
                     }
                   </FormDescription>
                   <FormMessage />
@@ -474,7 +474,7 @@ function FormCampaign(props: PropTypes) {
                     />
                   </FormControl>
                   <FormDescription>
-                    Nomor WhatsApp harus yang aktif untuk membantu wakif jika ada masalah.
+                    Nomor WhatsApp harus yang aktif untuk membantu donatur jika ada masalah.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>

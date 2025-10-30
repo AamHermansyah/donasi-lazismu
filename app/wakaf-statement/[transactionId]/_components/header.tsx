@@ -13,15 +13,15 @@ function Header() {
         'text-xl sm:text-2xl font-[900] uppercase text-[#7B9039] leading-6 md:leading-9',
         gravitasOne.className)
       }>
-        Yayasan Al Ihsan Kudang Uyah{' '}
+        Lazismu{' '}
         <br className="hidden sm:block" />
-        Kota Tasikmalaya
+        Kabupaten Tasikmalaya
       </h1>
       <p className="text-[10px] sm:text-xs">
-        Sekretariat : Jl. R.E. Martadinata Blk. No.222 Kudang Uyah Cipedes Kota Tasikmalaya 46133
+        Jl. Sukahaji Singasari Singaparna Kabupaten Tasikmalaya 46412
       </p>
       <p className="text-xs sm:text-sm">
-        Telpon: 082126641169 | Email: webppmalihsan@gmail.com
+        Telpon: 085223355383 | Email: kabtasikmalayalazismu@gmail.com
       </p>
     </header>
   )

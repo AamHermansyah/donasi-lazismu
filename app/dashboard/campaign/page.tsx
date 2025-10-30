@@ -12,7 +12,7 @@ async function CampaignPage() {
 
   return (
     <>
-      <div className="w-full rounded-lg bg-gradient-to-tr from-secondary to-blue-500 p-4 sm:p-10 space-y-2 sm:space-y-4">
+      <div className="w-full rounded-lg bg-gradient-to-tr from-secondary to-red-500 p-4 sm:p-10 space-y-2 sm:space-y-4">
         <h1 className="text-2xl sm:text-4xl font-bold text-background max-w-5xl leading-7 sm:leading-snug">
           Yukk, mari kita berbagi dan tunjukan kepedulian terhadap sesama manusia, khususnya bagi saudara-saudara kita yang terdampak bencana.
         </h1>
