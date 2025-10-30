@@ -137,7 +137,7 @@ const DataTable: React.FC<IProps> = ({ data, limit, hiddenFilterAndSearch, title
         <div className="w-full flex items-end gap-2">
           <div className="w-full max-w-sm">
             <InputSearch
-              placeholder="Cari transaksi: nama wakif, judul kampanye"
+              placeholder="Cari transaksi: nama donatur, judul kampanye"
               onChange={handleSearch}
             />
           </div>

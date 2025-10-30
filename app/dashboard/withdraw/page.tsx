@@ -37,9 +37,9 @@ async function WithdrawPage() {
         <Overview data={overviewData} />
         <div className="p-4 rounded-lg bg-background">
           <p className="text-xs">
-            <b>Penting:</b> Wakaf tersedia mencakup jumlah wakaf dari seluruh kampanye.
+            <b>Penting:</b> Saldo donasi tersedia mencakup jumlah donasi dari seluruh kampanye.
             Namun, jika ada permintaan penarikan oleh pengurus dengan status pending,
-            jumlah wakaf tersedia akan dikurangi sesuai dengan jumlah permintaan penarikan tersebut.
+            jumlah donasi tersedia akan dikurangi sesuai dengan jumlah permintaan penarikan tersebut.
           </p>
         </div>
         <div className="text-right lg:hidden">

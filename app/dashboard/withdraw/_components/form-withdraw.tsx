@@ -148,7 +148,7 @@ function FormWithdraw({ campaigns, withdrawalAccounts, initialValues }: IProps) 
 
   return (
     <div className="bg-background p-4 rounded-xl shadow-sm space-y-2 max-w-3xl mx-auto">
-      <h2 className="text-lg font-bold text-secondary">Cairkan Wakaf</h2>
+      <h2 className="text-lg font-bold text-secondary">Cairkan Donasi</h2>
       <StepHeader data={steps} />
       <div className="w-full overflow-x-hidden">
         <div

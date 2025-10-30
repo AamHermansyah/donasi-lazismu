@@ -99,7 +99,7 @@ const WakifList: React.FC<IProps> = ({ campaignId, data, totalWakif, limit }) =>
     <div className="bg-background rounded-md shadow-sm p-4 space-y-4 sticky top-0">
       <div className="flex gap-2 items-center">
         <h2 className="text-lg sm:text-xl font-bold">
-          Wakif
+          Donatur
         </h2>
         <span className="inline-block rounded-full bg-secondary text-white px-3 py-[2px] text-sm">
           {wakifCount}
@@ -124,7 +124,7 @@ const WakifList: React.FC<IProps> = ({ campaignId, data, totalWakif, limit }) =>
         })}
         {data.length === 0 && (
           <p className="text-center mb-4">
-            Belum ada wakif, ayo jadi yang pertama!
+            Belum ada donatur, ayo jadi yang pertama!
           </p>
         )}
         {loading && (

@@ -35,12 +35,12 @@ async function WithdrawPage({ params }: { params: IParams }) {
           <h1 className="text-xl sm:text-2xl font-bold text-white mb-2">
             {user!.role !== 'SUPER_ADMIN' ?
               'Terima kasih!' :
-              'Penarikan wakaf'}
+              'Penarikan Donasi'}
           </h1>
           <p className="text-sm sm:text-base text-white">
             {user!.role !== 'SUPER_ADMIN' ?
               'Permintaan penarikan dana anda telah diterima dan sedang diproses.' :
-              'Silahkan transfer wakaf ke akun penarikan yang tertera dan upload bukti pembayaran.'}
+              'Silahkan transfer donasi ke akun penarikan yang tertera dan upload bukti pembayaran.'}
           </p>
         </div>
       )}

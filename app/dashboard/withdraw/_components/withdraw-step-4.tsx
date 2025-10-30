@@ -23,7 +23,7 @@ const WithdrawStep4 = forwardRef<HTMLDivElement, IProps>(({
           onChange={(e) => onDescriptionChange(e.target.value)}
         ></Textarea>
         <p className="text-xs mt-1">
-          Jelaskan secara rinci mengapa anda menarik wakaf dari kampanye yang dipilih.
+          Jelaskan secara rinci mengapa anda menarik donasi dari kampanye yang dipilih.
           Ini akan ditampilkan pada bagian alur pencairan
           dana di detail kampanye untuk transparansi data.
         </p>

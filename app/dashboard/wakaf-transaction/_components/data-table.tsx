@@ -158,7 +158,7 @@ function DataTable({ data, limit }: IProps) {
       <div className="w-full flex items-end gap-2">
         <div className="w-full max-w-sm">
           <InputSearch
-            placeholder="Cari transaksi: nama wakif, judul kampanye"
+            placeholder="Cari transaksi: nama donatur, judul kampanye"
             onChange={handleSearch}
           />
         </div>
@@ -171,7 +171,7 @@ function DataTable({ data, limit }: IProps) {
         <Table>
           <TableHead>
             <TableHeadCol className="rounded-l-lg">Wakif</TableHeadCol>
-            <TableHeadCol className="text-right">Jumlah Wakaf</TableHeadCol>
+            <TableHeadCol className="text-right">Jumlah Donasi</TableHeadCol>
             <TableHeadCol>Status</TableHeadCol>
             <TableHeadCol className="min-w-[150px]">Kampanye Tujuan</TableHeadCol>
             <TableHeadCol>Status Verifikasi</TableHeadCol>

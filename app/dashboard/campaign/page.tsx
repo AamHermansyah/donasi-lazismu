@@ -14,14 +14,14 @@ async function CampaignPage() {
     <>
       <div className="w-full rounded-lg bg-gradient-to-tr from-secondary to-blue-500 p-4 sm:p-10 space-y-2 sm:space-y-4">
         <h1 className="text-2xl sm:text-4xl font-bold text-background max-w-5xl leading-7 sm:leading-snug">
-          Yukk, mari kita berbagi dan tunjukan kepedulian terhadap sesama manusia.
+          Yukk, mari kita berbagi dan tunjukan kepedulian terhadap sesama manusia, khususnya bagi saudara-saudara kita yang terdampak bencana.
         </h1>
         <h2 className="text-xl sm:text-3xl font-extrabold text-gray-800 max-w-5xl tracking-wider">
-          #BantuSesama
+          #BantuSesama #LazismuKabTasikmalaya #PeduliBencana
         </h2>
         <div className="p-4 rounded-md bg-muted">
           <p className="text-xs">
-            <b>Disclaimer:</b> Kampanye ini diadakan secara resmi oleh pengurus dari Pondok Pesantren Mahasiswa Al-Ihsan dan menjadi tanggung jawabnya. Jika ada masalah atau kecurigaan silahkan <a href="#" className="text-secondary underline">laporkan kepada pihak pengembang.</a>
+            <b>Disclaimer:</b> Kampanye ini diadakan secara resmi oleh Lazismu Kabupaten Tasikmalaya dan menjadi tanggung jawabnya. Jika ada masalah atau kecurigaan, silakan <a href="#" className="text-secondary underline">laporkan kepada pihak pengembang.</a>
           </p>
         </div>
       </div>

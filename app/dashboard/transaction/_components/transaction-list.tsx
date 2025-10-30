@@ -103,7 +103,7 @@ function TransactionList({ data, limit }: IProps) {
     <>
       <div className="max-w-sm">
         <InputSearch
-          placeholder="Cari transaksi: nama wakif, judul kampanye"
+          placeholder="Cari transaksi: nama donatur, judul kampanye"
           onChange={handleSearch}
         />
       </div>

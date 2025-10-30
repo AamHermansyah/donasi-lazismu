@@ -14,7 +14,7 @@ function Overview({ data }: IProps) {
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <CardOverview
         className="bg-gradient-to-tr from-secondary to-lime-400 text-secondary-foreground"
-        title="Wakaf Tersedia"
+        title="Saldo Donasi Tersedia"
         value={formatRupiah(data.totalAvailableBalance)}
       />
       <CardOverview
