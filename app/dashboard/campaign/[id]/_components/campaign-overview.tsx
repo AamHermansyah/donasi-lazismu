@@ -169,7 +169,7 @@ function CampaignOverview({ className, data, role }: IProps) {
               />
               {role === "USER" && data.status === "RUNNING" ? (
                 <Link
-                  href={`/dashboard/berwakaf?campaign_id=${data.id}`}
+                  href={`/dashboard/berdonasi?campaign_id=${data.id}`}
                   className="inline-block flex-1"
                 >
                   <Button variant="secondary" className="relative w-full">
@@ -187,7 +187,7 @@ function CampaignOverview({ className, data, role }: IProps) {
                   onClick={() => {
                     if (!role) {
                       const callbackUrl = encodeURIComponent(
-                        `/dashboard/berwakaf?campaign_id=${data.id}`
+                        `/dashboard/berdonasi?campaign_id=${data.id}`
                       );
                       navigate.push(`/auth/login?callbackUrl=${callbackUrl}`);
                     }

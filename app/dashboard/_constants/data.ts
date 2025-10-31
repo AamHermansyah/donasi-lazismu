@@ -59,7 +59,7 @@ export const sidebarNavItems: SidebarNavItems[] = [
     type: "divider",
   },
   {
-    href: "/dashboard/berwakaf",
+    href: "/dashboard/berdonasi",
     icon: LiaDonateSolid,
     text: "Berdonasi",
     role: 'USER'

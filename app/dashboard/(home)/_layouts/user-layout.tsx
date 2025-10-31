@@ -11,7 +11,7 @@ interface IProps {
 const UserLayout: React.FC<IProps> = async ({ userId }) => {
   return (
     <div className="space-y-4">
-      <Link href="/dashboard/berwakaf">
+      <Link href="/dashboard/berdonasi">
         <Button size="sm" variant="secondary" className="text-xs">
           Ayo Berdonasi
         </Button>
