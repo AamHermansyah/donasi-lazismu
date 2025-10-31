@@ -102,13 +102,13 @@ export async function POST(req: Request) {
       await db.notification.create({
         data: {
           userId: transaction.userId,
-          title: 'Transaksi wakaf gagal',
+          title: 'Transaksi donasi gagal',
           type: 'ERROR',
           message: `
-            Serah terima wakaf pada kampanye  
+            Serah terima donasi pada kampanye  
             <b>${transaction.campaign.title}</b> 
             dengan nominal ${formatRupiah(transaction.amount)} gagal dilakukan. 
-            Hal ini terjadi karena batas pembayaran wakaf telah kadaluarsa 
+            Hal ini terjadi karena batas pembayaran donasi telah kadaluarsa 
             atau anda membatalkannya dihalaman transaksi detail. Lihat lebih rinci di  
             <a href="/dashboard/transaction/${transaction.id}" target="_blank" rel="noopener noreferrer">
               halaman transaksi
@@ -208,7 +208,7 @@ async function handleOnSuccess(data: SuccessHandleParams) {
         role: 'ADMIN',
         message: `
           Kampanye dengan judul <b>${data.titleCampaign}</b> telah berhasil mencapai 
-          target dengan wakaf terkumpul sebesar ${formatRupiah(data.collected)}. 
+          target dengan donasi terkumpul sebesar ${formatRupiah(data.collected)}. 
           Anda dapat melihat detail kampanye tersebut di 
           <a href="/dashboard/campaign/${data.campaignId}" target="_blank" rel="noopener noreferrer">
             halaman detail
@@ -222,13 +222,13 @@ async function handleOnSuccess(data: SuccessHandleParams) {
   await db.notification.create({
     data: {
       userId: data.userId,
-      title: 'Yayy... transaksi wakaf berhasil',
+      title: 'Yayy... transaksi donasi berhasil',
       type: 'SUCCESS',
       message: `
-        Serah terima wakaf pada kampanye  
+        Serah terima donasi pada kampanye  
         <b>${data.titleCampaign}</b> 
         dengan nominal ${formatRupiah(data.amount)} berhasil dilakukan. 
-        Terima kasih atas bantuan anda, wakaf akan segera disalurkan💖. Lihat lebih rinci di 
+        Terima kasih atas bantuan anda, donasi akan segera disalurkan💖. Lihat lebih rinci di 
         <a href="/dashboard/transaction/${data.transactionId}" target="_blank" rel="noopener noreferrer">
           halaman transaksi
         </a>.

@@ -9,7 +9,7 @@ function ContentWakif({ data }: IProps) {
   return (
     <>
       <section>
-        <p>Yang bertanda tangan di bawah ini kami wakif dan penerima wakaf menerangkan bahwa:</p>
+        <p>Yang bertanda tangan di bawah ini kami donatur dan penerima donasi menerangkan bahwa:</p>
         <div className="relative mt-4 flex flex-col gap-2">
           <div className="w-full flex gap-1">
             <span className="block w-[130px] sm:w-[220px]">Nama Para/Ahli Waris</span>
@@ -45,7 +45,7 @@ function ContentWakif({ data }: IProps) {
         </div>
       </section>
       <p className="italic my-4">
-        (Selaku Pewakaf/wakif yang selanjutnya disebut pihak ke-I)
+        (Selaku donatur yang selanjutnya disebut pihak ke-I)
       </p>
     </>
   )

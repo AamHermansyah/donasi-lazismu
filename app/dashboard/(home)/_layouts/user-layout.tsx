@@ -13,7 +13,7 @@ const UserLayout: React.FC<IProps> = async ({ userId }) => {
     <div className="space-y-4">
       <Link href="/dashboard/berwakaf">
         <Button size="sm" variant="secondary" className="text-xs">
-          Ayo Berwakaf
+          Ayo Berdonasi
         </Button>
       </Link>
       <UserOverview userId={userId} />

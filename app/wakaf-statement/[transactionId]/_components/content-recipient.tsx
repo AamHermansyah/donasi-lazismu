@@ -41,7 +41,7 @@ function ContentRecipient({ data }: IProps) {
         </div>
       </section>
       <p className="italic my-4">
-        (Selaku Penerima Wakaf yang selanjutnya disebut pihak ke-II)
+        (Selaku Penerima Donasi yang selanjutnya disebut pihak ke-II)
       </p>
     </>
   )

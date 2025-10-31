@@ -72,7 +72,7 @@ export function NonactiveCampaignAlert({
         <AlertDialogHeader>
           <AlertDialogTitle>Apakah kamu yakin?</AlertDialogTitle>
           <AlertDialogDescription>
-            {status === 'RUNNING' && 'Aksi ini akan menonaktifkan kampanye sementara dan user tidak akan bisa berwakaf. Jangan khawatir, anda bisa mengaktifkannya kembali kapanpun!'}
+            {status === 'RUNNING' && 'Aksi ini akan menonaktifkan kampanye sementara dan user tidak akan bisa berdonasi. Jangan khawatir, anda bisa mengaktifkannya kembali kapanpun!'}
             {status === 'CLOSED' && 'Aksi ini akan mengaktifkan kembali kampanye yang sementara dinonaktifkan.'}
           </AlertDialogDescription>
         </AlertDialogHeader>

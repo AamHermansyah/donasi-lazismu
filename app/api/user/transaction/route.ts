@@ -114,7 +114,7 @@ export async function POST(req: Request) {
         title: 'Lakukan pembayaran',
         type: 'PENDING',
         message: `
-          Segera lakukan pembayaran transaksi wakaf pada kampanye  
+          Segera lakukan pembayaran transaksi donasi pada kampanye  
           <b>${campaign.title}</b> 
           dengan nominal ${formatRupiah(newTransaction.amount)}. 
           Transaksi ini hanya berlaku untuk 1 jam kedepan, 

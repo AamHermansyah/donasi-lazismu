@@ -125,7 +125,7 @@ const LeaderboardWakif = async () => {
               </p>
               {role === 'USER' && (
                 <Button size="sm" variant="secondary" className="text-xs">
-                  Mulai berwakaf
+                  Mulai berdonasi
                 </Button>
               )}
             </TableCell>

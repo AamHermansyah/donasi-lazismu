@@ -84,7 +84,7 @@ const Navbar: React.FC<IProps> = ({ isAuthenticated }) => {
               Beranda
             </Link>
             <Link href="/wakaf" className="w-max" onClick={toggleNav}>
-              Wakaf
+              Donasi
             </Link>
             <Link href="/#about" className="w-max" onClick={toggleNav}>
               Tentang Kami

@@ -46,7 +46,7 @@ export const campaignSchemaRaw = {
       const numericValue = parseFloat(price);
       return !isNaN(numericValue) && numericValue >= 100000;
     }, {
-      message: "Target wakaf harus sama dengan atau lebih dari Rp100.000.",
+      message: "Target donasi harus sama dengan atau lebih dari Rp100.000.",
     }),
   phone: z.string()
     .min(1, {

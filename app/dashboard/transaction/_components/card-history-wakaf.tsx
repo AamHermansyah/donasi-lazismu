@@ -45,7 +45,7 @@ const CardHistoryWakaf = forwardRef<HTMLDivElement, IProps>(({ data }, ref) => {
         </h2>
         <div>
           <h5 className="text-xs text-gray-700 font-semibold">
-            Berwakaf sebesar
+            Berdonasi sebesar
           </h5>
           <span className="block text-xs md:text-sm text-secondary font-bold">
             {formatRupiah(data.amount)}

@@ -146,7 +146,7 @@ function DetailOrder({
         {status !== 'PENDING' && (
           <Link href="/dashboard/campaign" className="w-full block">
             <Button variant="secondary" className="w-full">
-              Berwakaf lagi
+              Berdonasi lagi
             </Button>
           </Link>
         )}

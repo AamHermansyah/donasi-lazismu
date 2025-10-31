@@ -49,7 +49,7 @@ async function WithdrawPage() {
               variant="secondary"
               className="text-xs"
             >
-              Tarik Wakaf
+              Tarik Donasi
             </Button>
           </Link>
         </div>

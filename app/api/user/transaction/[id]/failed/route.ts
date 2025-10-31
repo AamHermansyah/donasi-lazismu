@@ -54,13 +54,13 @@ export async function POST(req: Request, { params }: { params: IParams }) {
     await db.notification.create({
       data: {
         userId: transaction.userId,
-        title: 'Transaksi wakaf gagal',
+        title: 'Transaksi donasi gagal',
         type: 'ERROR',
         message: `
-          Serah terima wakaf pada kampanye  
+          Serah terima donasi pada kampanye  
           <b>${campaign.title}</b> 
           dengan nominal ${formatRupiah(transaction.amount)} gagal dilakukan. 
-          Hal ini terjadi karena batas pembayaran wakaf telah kadaluarsa 
+          Hal ini terjadi karena batas pembayaran donasi telah kadaluarsa 
           atau anda membatalkannya dihalaman transaksi detail. Lihat lebih rinci di  
           <a href="/dashboard/transaction/${transaction.id}" target="_blank" rel="noopener noreferrer">
             halaman transaksi

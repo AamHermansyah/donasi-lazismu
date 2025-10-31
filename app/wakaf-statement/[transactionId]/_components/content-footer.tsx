@@ -13,7 +13,7 @@ function ContentFooter({ recipient, wakif, createdAt }: IProps) {
       <div className="text-center">
         <p>&nbsp;</p> {/* For spacing alignment */}
         <p className="mt-2">
-          Yang menerima Wakaf <br /> Pihak Kedua
+          Yang menerima Donasi <br /> Pihak Kedua
         </p>
         <p className="mt-16 font-semibold">{wakif}</p>
       </div>
@@ -25,7 +25,7 @@ function ContentFooter({ recipient, wakif, createdAt }: IProps) {
           })}
         </p>
         <p className="mt-2">
-          Yang menyatakan Wakaf/Wakif <br /> Pihak Kesatu
+          Yang menyatakan Donasi <br /> Pihak Kesatu
         </p>
         <p className="mt-16 font-semibold">{recipient}</p>
       </div>
