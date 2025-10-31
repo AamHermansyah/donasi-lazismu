@@ -17,7 +17,7 @@ const CardSertificate = () => {
           <div className="mt-6 mx-auto w-[650px]">
             <div className="flex justify-center">
               <div className="border-b border-gray-400 py-2 w-[80%] text-center font-bold">
-                Nama pewakif...
+                Nama Donatur...
               </div>
             </div>
 

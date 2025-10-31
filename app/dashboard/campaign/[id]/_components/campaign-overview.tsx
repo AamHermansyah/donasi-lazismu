@@ -122,7 +122,7 @@ function CampaignOverview({ className, data, role }: IProps) {
               </div>
               <div className="text-right">
                 <h4 className="text-xs sm:text-base leading-3 text-gray-500">
-                  Wakif
+                  Donatur
                 </h4>
                 <span className="block font-semibold text-sm sm:text-lg">
                   {data.numberOfWakif}
