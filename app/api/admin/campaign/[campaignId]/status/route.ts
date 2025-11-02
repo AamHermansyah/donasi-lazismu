@@ -1,4 +1,4 @@
-import { auth } from "@/auth"
+import { auth } from "@/lib/auth"
 import { getUserById } from "@/data/user"
 import { db } from "@/lib/db"
 import { formatRupiah, isAdmin } from "@/lib/utils";
@@ -6,12 +6,12 @@ import { CampaignStatus } from "@prisma/client";
 import { NextResponse } from "next/server"
 
 interface IParams {
-  campaignId?: number;
+  campaignId?: string;
 }
 
-export async function PATCH(req: Request, { params }: { params: IParams }) {
+export async function PATCH(req: Request, { params }: { params: Promise<IParams> }) {
   try {
-    const { campaignId } = params;
+    const { campaignId } = await params;
     const session = await auth();
     if (!session || !session.user) {
       return new NextResponse('Unauthorized', { status: 401 });

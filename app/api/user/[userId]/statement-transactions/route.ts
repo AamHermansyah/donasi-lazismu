@@ -6,8 +6,8 @@ interface IParams {
   userId?: string;
 }
 
-export async function GET(req: Request, { params }: { params: IParams }) {
-  const { userId } = params;
+export async function GET(req: Request, { params }: { params: Promise<IParams> }) {
+  const { userId } = await params;
   const url = new URL(req.url);
   const searchParams = url.searchParams;
   const cursor = searchParams.get('cursor') || undefined;

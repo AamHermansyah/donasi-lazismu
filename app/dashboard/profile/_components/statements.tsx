@@ -104,7 +104,7 @@ function Statements({ data, limit, userId }: IProps) {
                   <TableCell>{item.campaign.title}</TableCell>
                   <TableCell>{formatRupiah(item.amount)}</TableCell>
                   <TableCell align="center" className="rounded-r-lg">
-                    <Link href={`/wakaf-statement/${item.id}`} target="_blank" rel="noopener noreferrer">
+                    <Link href={`/statement/${item.id}`} target="_blank" rel="noopener noreferrer">
                       <button className="text-blue-500">
                         <FaEye />
                       </button>

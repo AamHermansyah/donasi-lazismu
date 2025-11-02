@@ -1,18 +1,16 @@
-import QRCodeComponent from '@/components/shared/qr-component';
 import { User } from '@prisma/client'
 
 interface IProps {
   data: User;
 }
 
-function ContentWakif({ data }: IProps) {
+function ContentRecipient({ data }: IProps) {
   return (
     <>
       <section>
-        <p>Yang bertanda tangan di bawah ini kami donatur dan penerima donasi menerangkan bahwa:</p>
-        <div className="relative mt-4 flex flex-col gap-2">
+        <div className="w-full mt-4 flex flex-col gap-2">
           <div className="w-full flex gap-1">
-            <span className="block w-[130px] sm:w-[220px]">Nama Para/Ahli Waris</span>
+            <span className="block w-[130px] sm:w-[220px]">Nama</span>
             {" : "}
             <span className="block w-full font-semibold">
               {data.name || 'tidak diisi'}
@@ -39,16 +37,13 @@ function ContentWakif({ data }: IProps) {
               {data.address || 'tidak diisi'}
             </span>
           </div>
-          <div className="absolute top-[50%] -translate-y-[50%] right-4">
-            <QRCodeComponent text={window.location.href} />
-          </div>
         </div>
       </section>
       <p className="italic my-4">
-        (Selaku donatur yang selanjutnya disebut pihak ke-I)
+        (Selaku Penerima Donasi yang selanjutnya disebut pihak ke-II)
       </p>
     </>
   )
 }
 
-export default ContentWakif
+export default ContentRecipient

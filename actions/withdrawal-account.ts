@@ -1,6 +1,6 @@
 "use server"
 
-import { auth } from "@/auth"
+import { auth } from "@/lib/auth"
 import { db } from "@/lib/db"
 import { accountSchema } from "@/schemas";
 import { z } from "zod";

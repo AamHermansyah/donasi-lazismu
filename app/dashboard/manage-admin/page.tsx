@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/alert"
 import { getAllAdmins } from '@/data/admin'
 import { getUserByEmail } from '@/data/user'
-import { auth } from '@/auth'
+import { auth } from '@/lib/auth'
 import { isAdmin } from '@/lib/utils'
 import { User } from '@prisma/client'
 import { redirect } from 'next/navigation'

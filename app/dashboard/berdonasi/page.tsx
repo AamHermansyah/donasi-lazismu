@@ -4,7 +4,7 @@ import FormBerwakaf from './_components/form-berwakaf'
 import { Campaign } from '@prisma/client';
 import { getCampaignById } from '@/data/campaign';
 import { FormTypes } from './_types';
-import { auth } from '@/auth';
+import { auth } from '@/lib/auth';
 
 interface IProps {
   searchParams: {

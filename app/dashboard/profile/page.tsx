@@ -1,4 +1,4 @@
-import { auth } from "@/auth";
+import { auth } from "@/lib/auth";
 import Certifications from "./_components/statements"
 import Profile from "./_components/profile"
 import { getUserByEmail } from "@/data/user";

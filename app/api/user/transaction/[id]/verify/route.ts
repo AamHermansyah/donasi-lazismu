@@ -1,4 +1,4 @@
-import { auth } from "@/auth"
+import { auth } from "@/lib/auth"
 import { getUserById } from "@/data/user"
 import { db } from "@/lib/db"
 import { formatRupiah, isAdmin } from "@/lib/utils";
@@ -8,9 +8,9 @@ interface IParams {
   id?: string;
 }
 
-export async function POST(req: Request, { params }: { params: IParams }) {
+export async function POST(req: Request, { params }: { params: Promise<IParams> }) {
   try {
-    const { id } = params;
+    const { id } = await params;
     const session = await auth();
     if (!session || !session.user) {
       return new NextResponse('Unauthorized', { status: 401 });
@@ -64,7 +64,7 @@ export async function POST(req: Request, { params }: { params: IParams }) {
           <b>${campaign.title}</b> 
           dengan nominal ${formatRupiah(transaction.amount)} telah berhasil diverifikasi. 
           anda mendapatkan surat pernyataan resmi dengan klik tombol 
-          <a href="/wakaf-statement/${transaction.id}" target="_blank" rel="noopener noreferrer">
+          <a href="/statement/${transaction.id}" target="_blank" rel="noopener noreferrer">
             lihat surat pernyataan
           </a>.
         `

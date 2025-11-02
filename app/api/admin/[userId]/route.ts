@@ -1,4 +1,4 @@
-import { auth } from "@/auth"
+import { auth } from "@/lib/auth"
 import { get5UsersByEmailKeyword, getUserById } from "@/data/user"
 import { db } from "@/lib/db";
 import { isAdmin } from "@/lib/utils";
@@ -9,10 +9,10 @@ interface IParams {
   userId?: string;
 }
 
-export async function POST(req: Request, { params }: { params: IParams }) {
+export async function POST(req: Request, { params }: { params: Promise<IParams> }) {
   try {
     const { role }: { role: UserRole } = await req.json();
-    const { userId } = params;
+    const { userId } = await params;
     if (!userId || !role) {
       return new NextResponse('Invalid input', { status: 400 });
     }
@@ -75,9 +75,9 @@ export async function POST(req: Request, { params }: { params: IParams }) {
   }
 }
 
-export async function DELETE(req: Request, { params }: { params: IParams }) {
+export async function DELETE(req: Request, { params }: { params: Promise<IParams> }) {
   try {
-    const { userId } = params;
+    const { userId } = await params;
     if (!userId) {
       return new NextResponse('Invalid input', { status: 400 });
     }

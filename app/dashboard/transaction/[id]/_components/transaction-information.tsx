@@ -88,7 +88,7 @@ function TransactionInformation({ createdAt, id, status, statementVerified }: IP
             title="Bagikan surat pernyataan donasi"
             description="Ayo ajak rekan atau keluarga anda untuk berdonasi dengan membagikan surat pernyataan yang telah didapatkan!"
           />
-          <Link href={`/wakaf-statement/${id}`} className="w-full" target="_blank" rel="noopener noreferrer">
+          <Link href={`/statement/${id}`} className="w-full" target="_blank" rel="noopener noreferrer">
             <Button className="w-full">
               Lihat surat pernyataan
             </Button>

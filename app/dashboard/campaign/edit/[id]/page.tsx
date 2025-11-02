@@ -1,6 +1,6 @@
 import React from 'react'
 import FormCampaign from '../../../campaign/_components/form-campaign'
-import { auth } from '@/auth'
+import { auth } from '@/lib/auth'
 import { redirect } from 'next/navigation';
 import { getCampaignById } from '@/data/campaign';
 import { User } from '@prisma/client';

@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation"
 import { getAllTransactions } from "@/data/transaction"
 import TransactionList from "./_components/transaction-list";
-import { auth } from "@/auth";
+import { auth } from "@/lib/auth";
 
 const LIMIT = 12;
 

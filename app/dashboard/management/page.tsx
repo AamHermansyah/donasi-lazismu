@@ -1,6 +1,6 @@
 import React from "react"
 import DataTable from "./_components/data-table"
-import { auth } from "@/auth"
+import { auth } from "@/lib/auth"
 import { getUserByEmail } from "@/data/user"
 import { User } from "@prisma/client"
 import { redirect } from "next/navigation"

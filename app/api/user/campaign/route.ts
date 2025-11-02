@@ -1,4 +1,4 @@
-import { auth } from "@/auth"
+import { auth } from "@/lib/auth"
 import { getAllCampaigns } from "@/data/campaign"
 import { getUserById } from "@/data/user"
 import { NextResponse } from "next/server"

@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './header'
 import SidebarMain from './sidebar-main';
-import { auth } from '@/auth';
+import { auth } from '@/lib/auth';
 import { User, UserRole } from '@prisma/client';
 import { getUserByEmail } from '@/data/user';
 import { redirect } from 'next/navigation';

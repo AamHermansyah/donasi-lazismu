@@ -2,11 +2,11 @@ import { getAllWithdrawalRequestsByCampaignId } from "@/data/withdrawal-request"
 import { NextResponse } from "next/server";
 
 interface IParams {
-  campaignId?: number;
+  campaignId?: string;
 }
 
-export async function GET(req: Request, { params }: { params: IParams }) {
-  const { campaignId } = params;
+export async function GET(req: Request, { params }: { params: Promise<IParams> }) {
+  const { campaignId } = await params;
   const url = new URL(req.url);
   const searchParams = url.searchParams;
   const cursor = searchParams.get('cursor') || undefined;

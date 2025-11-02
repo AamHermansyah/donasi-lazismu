@@ -2,7 +2,7 @@ import TransactionInformation from "./_components/transaction-information";
 import DetailOrder from "./_components/detail-order";
 import ContactCampaign from "@/components/shared/contact-campaign";
 import OverviewCampaign from "./_components/overview-campaign";
-import { auth } from "@/auth";
+import { auth } from "@/lib/auth";
 import { getUserByEmail } from "@/data/user";
 import { redirect } from "next/navigation";
 import { getTransactionById } from "@/data/transaction";

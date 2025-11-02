@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react'
+'use client'
+
 import ContentWakif from './content-wakif'
 import ContentRecipient from './content-recipient'
 import ContentFooter from './content-footer'

@@ -3,7 +3,7 @@ import OverviewCampaign from "./_components/overview-campaign";
 import WithdrawInformation from "./_components/withdraw-information";
 import DetailWithdraw from "./_components/detail-withdraw";
 import PopupPayment from "./_components/popup-payment";
-import { auth } from "@/auth";
+import { auth } from "@/lib/auth";
 import { User } from "@prisma/client";
 import { getUserByEmail } from "@/data/user";
 import { isAdmin } from "@/lib/utils";

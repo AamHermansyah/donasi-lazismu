@@ -10,7 +10,7 @@ import { FaCrown, FaMedal } from 'react-icons/fa'
 import { abbreviateName, anonymizeName, cn, formatRupiah, numberPrefixer } from '@/lib/utils'
 import { Button } from '@/components/ui/button';
 import { getTopWakif } from '@/data/wakif';
-import { auth } from '@/auth';
+import { auth } from '@/lib/auth';
 
 const LeaderboardWakif = async () => {
   const session = await auth();

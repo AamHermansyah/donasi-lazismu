@@ -1,4 +1,4 @@
-import { auth } from '@/auth'
+import { auth } from '@/lib/auth'
 import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
 

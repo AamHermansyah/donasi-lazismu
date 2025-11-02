@@ -1,4 +1,4 @@
-import { auth } from "@/auth"
+import { auth } from "@/lib/auth"
 import { get5UsersByEmailKeyword, getUserById } from "@/data/user"
 import { isAdmin } from "@/lib/utils";
 import { NextResponse } from "next/server"

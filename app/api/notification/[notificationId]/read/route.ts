@@ -1,4 +1,4 @@
-import { auth } from "@/auth";
+import { auth } from "@/lib/auth";
 import { getUserById } from "@/data/user";
 import { db } from "@/lib/db";
 import { NextResponse } from "next/server";
@@ -7,9 +7,9 @@ interface IParams {
   notificationId?: string;
 }
 
-export async function POST(req: Request, { params }: { params: IParams }) {
+export async function POST(req: Request, { params }: { params: Promise<IParams> }) {
   try {
-    const { notificationId } = params;
+    const { notificationId } = await params;
     const session = await auth();
     if (!session || !session.user) {
       return new NextResponse('Unauthorized', { status: 401 });

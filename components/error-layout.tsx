@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Button } from './ui/button'
-import { auth } from '@/auth';
+import { auth } from '@/lib/auth';
 import { Separator } from './ui/separator';
 import { logout } from '@/actions/authentication';
 

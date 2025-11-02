@@ -1,6 +1,6 @@
 "use server"
 
-import { auth } from "@/auth"
+import { auth } from "@/lib/auth"
 import { db } from "@/lib/db"
 
 export const postComment = async (message: string, campaignId: number) => {

@@ -1,4 +1,4 @@
-import { auth } from "@/auth";
+import { auth } from "@/lib/auth";
 import { getUserById } from "@/data/user";
 import { getAllWithdrawalRequests } from "@/data/withdrawal-request";
 import { db } from "@/lib/db";

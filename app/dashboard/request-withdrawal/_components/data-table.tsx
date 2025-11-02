@@ -41,7 +41,7 @@ const DataTable: React.FC<IProps> = ({ data, limit, hiddenFilterAndSearch, title
   const cancelTokenSource = useRef<CancelTokenSource | null>(null);
 
   const { handleAxiosErrorToast } = useAxiosErrorToast()
-  const observer = useRef<IntersectionObserver | null>()
+  const observer = useRef<IntersectionObserver | null>(null)
 
   const handleSearch = (value: string) => {
     // Hapus spasi di awal dan di akhir

@@ -37,7 +37,7 @@ const WakifList: React.FC<IProps> = ({ campaignId, data, totalWakif, limit }) =>
   const cancelTokenSource = useRef<CancelTokenSource | null>(null);
 
   const { handleAxiosErrorToast } = useAxiosErrorToast()
-  const observer = useRef<IntersectionObserver | null>()
+  const observer = useRef<IntersectionObserver | null>(null)
 
   const fetch = useCallback(() => {
     if (cancelTokenSource.current) {

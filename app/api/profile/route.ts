@@ -1,4 +1,4 @@
-import { auth } from "@/auth"
+import { auth } from "@/lib/auth"
 import { getUserById } from "@/data/user"
 import { cloudinary, preset, uploadImage } from "@/lib/cloudinary"
 import { db } from "@/lib/db"

@@ -38,7 +38,7 @@ export const sidebarNavItems: SidebarNavItems[] = [
     role: 'SUPER_ADMIN'
   },
   {
-    href: "/dashboard/wakaf-transaction",
+    href: "/dashboard/donasi-transaction",
     icon: PiHandCoins,
     text: "Serah Terima Donasi",
     role: 'ADMIN'

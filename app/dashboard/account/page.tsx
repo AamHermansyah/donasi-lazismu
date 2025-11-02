@@ -1,6 +1,6 @@
 import { getAllWithdrawalAccounts } from '@/data/withdrawal-account'
 import LayoutAccount from './_components/layout-account'
-import { auth } from '@/auth';
+import { auth } from '@/lib/auth';
 import { User } from '@prisma/client';
 import { getUserByEmail } from '@/data/user';
 import { isAdmin } from '@/lib/utils';

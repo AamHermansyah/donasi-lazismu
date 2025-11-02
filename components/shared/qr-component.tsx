@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+'use client'
+
+import { useEffect, useState } from 'react';
 import QRCode from 'qrcode.react';
 
 interface IProps {
@@ -24,6 +26,8 @@ const QRCodeComponent = ({ text }: IProps) => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  if (!text) return null;
 
   return (
     <QRCode value={text} size={size} />

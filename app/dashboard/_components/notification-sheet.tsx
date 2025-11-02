@@ -30,7 +30,7 @@ const NotificationSheet: React.FC<IProps> = ({ data, limit }) => {
   const cancelTokenSource = useRef<CancelTokenSource | null>(null);
 
   const { handleAxiosErrorToast } = useAxiosErrorToast()
-  const observer = useRef<IntersectionObserver | null>()
+  const observer = useRef<IntersectionObserver | null>(null)
   const {
     notificationDisplay,
     onOpenNotification,
