@@ -29,6 +29,7 @@
     "@radix-ui/react-tabs": "^1.1.0",
     "apexcharts": "^3.49.2",
     "axios": "^1.7.2",
+    "babel-plugin-react-compiler": "^1.0.0",
     "class-variance-authority": "^0.7.0",
     "cloudinary": "^2.4.0",
     "clsx": "^2.1.1",
@@ -39,13 +40,13 @@
     "lodash": "^4.17.21",
     "lucide-react": "^0.279.0",
     "nanoid": "^5.0.7",
-    "next": "^14.2.4",
-    "next-auth": "^5.0.0-beta.19",
+    "next": "^16.0.1",
+    "next-auth": "^5.0.0-beta.30",
     "next-themes": "^0.3.0",
     "qrcode.react": "^3.1.0",
-    "react": "latest",
+    "react": "^19.2.0",
     "react-apexcharts": "^1.4.1",
-    "react-dom": "latest",
+    "react-dom": "^19.2.0",
     "react-hook-form": "^7.52.0",
     "react-icons": "^4.11.0",
     "react-quill": "^2.0.0",
@@ -60,14 +61,18 @@
   "devDependencies": {
     "@types/lodash": "^4.17.6",
     "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
     "autoprefixer": "latest",
     "eslint": "latest",
-    "eslint-config-next": "latest",
+    "eslint-config-next": "16.0.1",
     "postcss": "latest",
     "prisma": "^5.16.1",
     "tailwindcss": "latest",
     "typescript": "latest"
+  },
+  "overrides": {
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2"
   }
 }

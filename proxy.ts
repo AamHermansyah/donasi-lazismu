@@ -7,9 +7,9 @@ import {
   publicRoutes
 } from './routes';
 
-const { auth: middleware } = NextAuth(authConfig);
+const { auth: proxy } = NextAuth(authConfig);
 
-export default middleware(async (req) => {
+export default proxy(async (req) => {
   const { nextUrl } = req;
   const session = req.auth;
   const isLoggedIn = !!session;

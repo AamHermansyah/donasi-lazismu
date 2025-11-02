@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
@@ -11,7 +12,11 @@ const nextConfig = {
         protocol: 'https'
       },
     ]
+  },
+  reactCompiler: true,
+  experimental: {
+    turbopackFileSystemCacheForDev: true
   }
-}
+};
 
-module.exports = nextConfig
+export default nextConfig;
