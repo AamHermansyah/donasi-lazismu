@@ -15,23 +15,24 @@ import { getCampaignCommentsByCampaignId } from '@/data/comment'
 import { User } from '@prisma/client'
 import { getUserById } from '@/data/user'
 
-interface IParams {
-  id: string;
-};
+interface IProps {
+  params: Promise<{ id: string }>
+}
 
 const COMMENT_LIMIT = 10;
 
-const CampaignDetailPage = async ({ params }: { params: IParams }) => {
+const CampaignDetailPage = async ({ params }: IProps) => {
   const session = await auth();
   let user: User | null = null;
+  const id = (await params).id;
 
   if (session?.user) {
     user = await getUserById(session.user.id!);
   }
 
-  if (isNaN(+params.id)) redirect('/404');
+  if (isNaN(+id)) redirect('/404');
 
-  const campaign = await getCampaignById(+params.id, {
+  const campaign = await getCampaignById(+id, {
     includeUser: true,
   });
 

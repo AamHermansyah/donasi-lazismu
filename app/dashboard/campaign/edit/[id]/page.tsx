@@ -7,22 +7,23 @@ import { User } from '@prisma/client';
 import { getUserByEmail } from '@/data/user';
 import { isAdmin } from '@/lib/utils';
 
-interface IParams {
-  id: string;
-};
+interface IProps {
+  params: Promise<{ id: string }>
+}
 
-async function EditPage({ params }: { params: IParams }) {
+async function EditPage({ params }: IProps) {
   const session = await auth();
   let user: User | null = null;
+  const id = (await params).id;
 
   if (!!session?.user.email!) {
     user = await getUserByEmail(session?.user.email!);
     if (!user || !isAdmin(user.role)) redirect('/404');
   }
 
-  if (isNaN(+params.id)) redirect('/404');
+  if (isNaN(+id)) redirect('/404');
 
-  const campaign = await getCampaignById(+params.id, {});
+  const campaign = await getCampaignById(+id, {});
 
   if (campaign === null || campaign.status === 'REACHED') redirect('/404');
 

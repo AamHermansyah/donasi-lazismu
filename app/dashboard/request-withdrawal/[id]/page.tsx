@@ -11,20 +11,21 @@ import { redirect } from "next/navigation";
 import { getWithdrawalRequestById } from "@/data/withdrawal-request";
 import { IoMdDownload } from "react-icons/io";
 
-interface IParams {
-  id: string;
-};
+interface IProps {
+  params: Promise<{ id: string }>
+}
 
-async function WithdrawPage({ params }: { params: IParams }) {
+async function WithdrawPage({ params }: IProps) {
   const session = await auth();
   let user: User | null = null;
+  const id = (await params).id;
 
   if (!!session?.user.email!) {
     user = await getUserByEmail(session?.user.email!);
     if (!user || !isAdmin(user.role)) redirect('/404');
   }
 
-  const withdrawalRequest = await getWithdrawalRequestById(params.id);
+  const withdrawalRequest = await getWithdrawalRequestById(id);
 
   if (!withdrawalRequest) redirect('/error');
 

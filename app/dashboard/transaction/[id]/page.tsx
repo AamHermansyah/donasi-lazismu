@@ -7,15 +7,16 @@ import { getUserByEmail } from "@/data/user";
 import { redirect } from "next/navigation";
 import { getTransactionById } from "@/data/transaction";
 
-interface IParams {
-  id: string;
-};
+interface IProps {
+  params: Promise<{ id: string }>
+}
 
-async function TransactionPage({ params }: { params: IParams }) {
+async function TransactionPage({ params }: IProps) {
   const session = await auth();
+  const id = (await params).id;
 
   const user = await getUserByEmail(session?.user.email!);
-  const transaction = await getTransactionById(params.id);
+  const transaction = await getTransactionById(id);
 
   if (!user || !transaction || (user.id !== transaction?.userId)) {
     redirect('/404');
