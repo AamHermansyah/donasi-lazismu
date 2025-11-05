@@ -21,7 +21,8 @@ async function WakafFlowWithdraw({ campaignId }: IProps) {
 
   return (
     <>
-      <div className="space-y-2">
+      <div className="space-y-3">
+        {/* Ringkasan saldo */}
         <div className="p-4 flex justify-between gap-4 border rounded-md">
           <h3 className="text-sm lg:text-base">
             Tersedia:{' '}
@@ -34,6 +35,27 @@ async function WakafFlowWithdraw({ campaignId }: IProps) {
             <b className="text-emerald-500">{formatRupiah(approvedAmount)}</b>
           </h3>
         </div>
+
+        {/* Narasi sekali di atas */}
+        <div className="p-4 sm:p-5 border rounded-md bg-amber-50 border-amber-200 text-amber-900">
+          <h6 className="font-semibold mb-1">Alokasi Penyaluran Dana</h6>
+          <p className="text-sm mb-1">
+            Dalam setiap pencairan dana, terdapat ketentuan pembagian yang diterapkan
+            agar penggunaan dana lebih terarah sesuai tujuan kampanye. Pembagian
+            tersebut meliputi:
+          </p>
+          <ul className="list-disc ps-5 text-sm">
+            <li>
+              <b>20%</b> dialokasikan untuk biaya operasional, seperti administrasi,
+              koordinasi lapangan, dan kebutuhan teknis pelaksanaan.
+            </li>
+            <li>
+              <b>80%</b> disalurkan secara langsung kepada penerima manfaat atau korban
+              bencana sesuai sasaran dari kampanye.
+            </li>
+          </ul>
+        </div>
+
         {data.length === 0 ? (
           <div className="px-2">
             <p className="text-sm lg:text-base">Belum ada data pencairan dana.</p>
