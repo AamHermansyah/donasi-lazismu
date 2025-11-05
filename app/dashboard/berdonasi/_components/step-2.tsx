@@ -20,6 +20,13 @@ const paymentMethods = [
         logo: '/images/midtrans-logo.png',
         description: 'Semua metode pembayaran ada disini.'
       },
+      {
+        id: 'cash-1',
+        value: 'Cash',
+        label: 'Cash Manual',
+        logo: '/images/cash-logo.png',
+        description: 'Bayar tunai ke petugas. Verifikasi dengan kode (segera hadir).'
+      },
     ]
   },
 ];
@@ -31,6 +38,7 @@ const Step2 = forwardRef<HTMLDivElement, IProps>(({ onChange }, ref) => {
         <span className="block px-4 py-1 rounded-full text-sm font-semibold bg-secondary/20 text-secondary">2</span>
         <h1 className="text-lg font-bold">Pilih metode donasi</h1>
       </div>
+
       {paymentMethods.map((category, index) => (
         <div key={index} className="space-y-1">
           <h4 className="font-bold text-sm">{category.category}</h4>
@@ -40,8 +48,8 @@ const Step2 = forwardRef<HTMLDivElement, IProps>(({ onChange }, ref) => {
                 <input
                   type="radio"
                   id={method.id}
-                  name="amount"
-                  value={`${method.value}`}
+                  name="payment-method"
+                  value={method.value}
                   className="hidden peer"
                   onChange={() => {
                     onChange({
@@ -63,10 +71,13 @@ const Step2 = forwardRef<HTMLDivElement, IProps>(({ onChange }, ref) => {
                         className="w-full h-full object-contain text-xs"
                       />
                     </div>
-                    {method.label}
+                    <div className="flex-1">
+                      <div className="font-semibold">{method.label}</div>
+                      <p className="text-xs text-muted-foreground">{method.description}</p>
+                    </div>
                   </div>
                 </label>
-                <p className="text-xs mt-1">{method.description}</p>
+
                 <FaCheck
                   className="
                     hidden
@@ -89,5 +100,4 @@ const Step2 = forwardRef<HTMLDivElement, IProps>(({ onChange }, ref) => {
 })
 
 Step2.displayName = 'Step2'
-
 export default Step2

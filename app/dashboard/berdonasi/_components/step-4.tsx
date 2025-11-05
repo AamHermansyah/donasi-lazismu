@@ -9,7 +9,6 @@ import { AiOutlineExclamationCircle } from 'react-icons/ai'
 import { Separator } from '@/components/ui/separator'
 import { forwardRef } from 'react'
 import { FormTypes } from '../_types'
-import { useSession } from 'next-auth/react'
 import { Session } from 'next-auth'
 import { formatRupiah } from '@/lib/utils'
 
@@ -20,12 +19,15 @@ interface IProps {
 }
 
 const Step4 = forwardRef<HTMLDivElement, IProps>(({ data, user, onChangeStep }, ref) => {
+  const isCash = data.step2.paymentMethodLabel?.toLowerCase().includes('cash');
+
   return (
     <div ref={ref} className="flex-1 space-y-4">
       <div className="flex items-center gap-2">
         <span className="block px-4 py-1 rounded-full text-sm font-semibold bg-secondary/20 text-secondary">4</span>
         <h1 className="text-lg font-bold">Ringkasan</h1>
       </div>
+
       <Alert variant="info">
         <AiOutlineExclamationCircle fontSize={22} />
         <AlertTitle>PENTING!</AlertTitle>
@@ -33,6 +35,7 @@ const Step4 = forwardRef<HTMLDivElement, IProps>(({ data, user, onChangeStep }, 
           Pastikan semua data sudah benar.
         </AlertDescription>
       </Alert>
+
       <div className="space-y-1">
         <div className="cursor-pointer rounded-lg border">
           <div className="flex items-center justify-between gap-2 p-2 shadow-sm text-sm">
@@ -58,6 +61,7 @@ const Step4 = forwardRef<HTMLDivElement, IProps>(({ data, user, onChangeStep }, 
           </div>
         </div>
       </div>
+
       <div className="space-y-2 text-sm sm:text-base">
         <h1 className="font-bold">Detail Informasi</h1>
         <div className="flex items-center justify-between gap-2">
@@ -71,7 +75,9 @@ const Step4 = forwardRef<HTMLDivElement, IProps>(({ data, user, onChangeStep }, 
           <span className="text-right">{data.step3.email}</span>
         </div>
       </div>
+
       <Separator />
+
       <div className="space-y-2 text-sm sm:text-base">
         <h1 className="font-bold">Detail Donasi</h1>
         <div className="flex items-center justify-between gap-2">
@@ -93,15 +99,61 @@ const Step4 = forwardRef<HTMLDivElement, IProps>(({ data, user, onChangeStep }, 
           </span>
         </div>
       </div>
-      <Separator />
-      <div className="space-y-2 text-sm sm:text-base">
-        <h1 className="font-bold">Pesan atau Doa</h1>
-        <div className="p-4 border rounded-md">
-          <p className="text-gray-400 italic">
-            {`"${data.step3.message || 'Anda tidak memasukan pesan atau doa apapun.'}"`}
-          </p>
-        </div>
-      </div>
+
+      {isCash && (
+        <>
+          <Separator />
+          <div className="space-y-2 text-sm sm:text-base">
+            <h1 className="font-bold">Verifikasi Cash Manual</h1>
+
+            {/* UI Placeholder – belum ada fungsi */}
+            <div className="rounded-lg border p-3 sm:p-4 space-y-3">
+              <div className="flex items-center justify-between gap-2">
+                <div>
+                  <div className="text-xs text-muted-foreground">Kode Verifikasi</div>
+                  <div className="text-xl font-extrabold tracking-widest text-muted-foreground select-none">
+                    • • • • • •
+                  </div>
+                </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  disabled
+                  className="opacity-60 cursor-not-allowed"
+                  title="Salin kode (segera hadir)"
+                >
+                  Salin
+                </Button>
+              </div>
+
+              <div className="flex items-center justify-between text-xs sm:text-sm">
+                <span className="text-muted-foreground">
+                  Berikan kode ini ke petugas untuk verifikasi pembayaran tunai.
+                </span>
+                <span className="font-semibold text-muted-foreground">
+                  Berlaku 01:00
+                </span>
+              </div>
+
+              <div className="pt-1">
+                <Button
+                  variant="primary"
+                  disabled
+                  className="h-9 opacity-60 cursor-not-allowed"
+                  title="Buat Kode (segera hadir)"
+                >
+                  Buat Kode (segera hadir)
+                </Button>
+              </div>
+            </div>
+
+            <p className="text-[11px] leading-4 text-muted-foreground">
+              Kode akan tidak berlaku otomatis setelah 1 jam. Fitur pembuatan kode akan tersedia segera.
+            </p>
+          </div>
+        </>
+      )}
+
       <Separator />
       <div className="space-y-1">
         <p className="text-xs">
@@ -116,5 +168,4 @@ const Step4 = forwardRef<HTMLDivElement, IProps>(({ data, user, onChangeStep }, 
 })
 
 Step4.displayName = 'Step4'
-
 export default Step4

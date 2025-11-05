@@ -6,19 +6,22 @@ import { getCampaignById } from '@/data/campaign';
 import { FormTypes } from './_types';
 import { auth } from '@/lib/auth';
 
-interface IProps {
-  searchParams: {
-    campaign_id?: string;
-  }
-}
+type PageProps = {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+};
 
-async function BerwakafPage({ searchParams }: IProps) {
+export default async function BerwakafPage({ searchParams }: PageProps) {
   const session = await auth();
 
+  // Unwrap searchParams (karena sekarang Promise)
+  const sp = await searchParams;
+  const raw = sp.campaign_id;
+  const campaignId = Array.isArray(raw) ? raw[0] : raw;
+
   let selectedCampaign: Omit<Campaign, 'description'> | null = null;
-  const { campaign_id } = searchParams;
-  if (campaign_id && !isNaN(+campaign_id)) {
-    selectedCampaign = await getCampaignById(+campaign_id, {
+
+  if (campaignId && !isNaN(Number(campaignId))) {
+    selectedCampaign = await getCampaignById(Number(campaignId), {
       withoutDescription: true
     });
   }
@@ -33,12 +36,12 @@ async function BerwakafPage({ searchParams }: IProps) {
       paymentLogo: '',
     },
     step3: {
-      name: session?.user.name || '',
-      email: session?.user.email || '',
+      name: session?.user?.name || '',
+      email: session?.user?.email || '',
       isHiddenName: false,
       message: ''
     },
-  }
+  };
 
   return (
     <div className="w-full grid items-start grid-cols-12 gap-4">
@@ -50,14 +53,12 @@ async function BerwakafPage({ searchParams }: IProps) {
           data={selectedCampaign}
           initialForm={initialForm}
           user={session?.user!}
-          campaignId={!!selectedCampaign ? selectedCampaign.id : null}
+          campaignId={selectedCampaign ? selectedCampaign.id : null}
         />
       </div>
       <div className="p-4 sm:p-6 rounded-lg bg-background col-span-12 md:hidden">
         <HowToWakaf />
       </div>
     </div>
-  )
+  );
 }
-
-export default BerwakafPage
