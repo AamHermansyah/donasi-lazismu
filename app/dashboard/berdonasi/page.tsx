@@ -1,10 +1,10 @@
-import OverviewCampaign from './_components/overview-campaign'
-import HowToWakaf from './_components/how-to-wakaf'
-import FormBerwakaf from './_components/form-berwakaf'
-import { Campaign } from '@prisma/client';
-import { getCampaignById } from '@/data/campaign';
-import { FormTypes } from './_types';
-import { auth } from '@/lib/auth';
+import OverviewCampaign from "./_components/overview-campaign";
+import HowToWakaf from "./_components/how-to-wakaf";
+import FormBerwakaf from "./_components/form-berwakaf";
+import { Campaign } from "@prisma/client";
+import { getCampaignById } from "@/data/campaign";
+import { FormTypes } from "./_types";
+import { auth } from "@/lib/auth";
 
 type PageProps = {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
@@ -18,28 +18,30 @@ export default async function BerwakafPage({ searchParams }: PageProps) {
   const raw = sp.campaign_id;
   const campaignId = Array.isArray(raw) ? raw[0] : raw;
 
-  let selectedCampaign: Omit<Campaign, 'description'> | null = null;
+  let selectedCampaign: Omit<Campaign, "description"> | null = null;
 
   if (campaignId && !isNaN(Number(campaignId))) {
     selectedCampaign = await getCampaignById(Number(campaignId), {
-      withoutDescription: true
+      withoutDescription: true,
     });
   }
 
   const initialForm: FormTypes = {
     step1: {
-      amount: 0
+      mode: 'money',   // <-- WAJIB ADA SEKARANG
+      amount: 0,
     },
     step2: {
       paymentMethodId: null,
       paymentMethodLabel: null,
-      paymentLogo: '',
+      paymentLogo: "",
+      // goods: akan diisi otomatis saat user pilih "Donasi Barang" di Step 1
     },
     step3: {
-      name: session?.user?.name || '',
-      email: session?.user?.email || '',
+      name: session?.user?.name || "",
+      email: session?.user?.email || "",
       isHiddenName: false,
-      message: ''
+      message: "",
     },
   };
 
