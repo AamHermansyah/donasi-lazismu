@@ -22,7 +22,7 @@ function SnapPayment({
   snapToken
 }: IProps) {
   useEffect(() => {
-    const midtransScriptUrl = `${process.env.NEXT_PUBLIC_MIDTRANS_API_URL}/snap/snap.js`;
+    const midtransScriptUrl = `${process.env.NEXT_PUBLIC_MIDTRANS_APP_URL}/snap/snap.js`;
     const myMidtransClientKey = process.env.NEXT_PUBLIC_MIDTRANS_CLIENT_KEY;
 
     let scriptTag = document.createElement('script') as HTMLScriptElement;
