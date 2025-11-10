@@ -1,4 +1,3 @@
-import React from 'react'
 import FormAddCampaign from '../../campaign/_components/form-campaign'
 import { auth } from '@/lib/auth';
 import { User } from '@prisma/client';

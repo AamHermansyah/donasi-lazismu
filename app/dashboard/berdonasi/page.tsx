@@ -7,16 +7,14 @@ import { FormTypes } from './_types';
 import { auth } from '@/lib/auth';
 
 interface IProps {
-  searchParams: {
-    campaign_id?: string;
-  }
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
 async function BerwakafPage({ searchParams }: IProps) {
   const session = await auth();
 
   let selectedCampaign: Omit<Campaign, 'description'> | null = null;
-  const { campaign_id } = searchParams;
+  const { campaign_id } = await searchParams;
   if (campaign_id && !isNaN(+campaign_id)) {
     selectedCampaign = await getCampaignById(+campaign_id, {
       withoutDescription: true

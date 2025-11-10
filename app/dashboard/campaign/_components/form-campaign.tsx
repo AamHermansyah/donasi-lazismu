@@ -1,6 +1,6 @@
 'use client'
 
-import { RichtextEditor } from '@/components/core/richtext-editor'
+import RichtextEditor from '@/components/core/richtext-editor'
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { useForm } from "react-hook-form"
@@ -485,11 +485,11 @@ function FormCampaign(props: PropTypes) {
               name="description"
               render={({ field }) => (
                 <FormItem className="sm:col-span-2">
-                  <FormLabel className="font-semibold">Deskripsi</FormLabel>
+                  <FormLabel id='tes' className="font-semibold">Deskripsi</FormLabel>
                   <FormControl>
                     <RichtextEditor
                       value={field.value}
-                      onChange={(output) => field.onChange(output)}
+                      onValueChange={(output) => field.onChange(output)}
                     />
                   </FormControl>
                   <FormDescription>
