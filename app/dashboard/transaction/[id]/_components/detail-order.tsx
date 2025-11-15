@@ -35,6 +35,8 @@ interface IProps {
   status: TransactionStatus;
   snapToken: string | null;
   snapRedirectUrl: string | null;
+  phone: string;
+  address: string;
 }
 
 function DetailOrder({
@@ -48,7 +50,9 @@ function DetailOrder({
   status,
   isHiddenName,
   snapRedirectUrl,
-  snapToken
+  snapToken,
+  address,
+  phone
 }: IProps) {
   const [cancelDisplay, setCancelDisplay] = useState(false);
   const [canceling, setCanceling] = useState(false);
@@ -112,8 +116,16 @@ function DetailOrder({
           </span>
         </div>
         <div className="flex items-center justify-between gap-2">
-          <span className="font-semibold text-gray-400">Email/Nomor Ponsel</span>
+          <span className="font-semibold text-gray-400">Email</span>
           <span className="text-right">{email}</span>
+        </div>
+        <div className="flex items-center justify-between gap-2">
+          <span className="font-semibold text-gray-400">Nomor Whatsapp</span>
+          <span className="text-right">{phone}</span>
+        </div>
+        <div className="flex items-center justify-between gap-2">
+          <span className="font-semibold text-gray-400">Alamat</span>
+          <span className="text-right">{address}</span>
         </div>
       </div>
       <Separator />

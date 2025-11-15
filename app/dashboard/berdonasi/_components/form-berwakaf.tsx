@@ -98,8 +98,14 @@ function FormBerwakaf({ data, initialForm, user, campaignId }: IProps) {
         const { paymentMethodId, paymentMethodLabel } = form.step2;
         return !paymentMethodId || !paymentMethodLabel;
       case 3:
-        const { email, name } = form.step3;
-        return !email || !name;
+        const { email, name, phone, address } = form.step3;
+
+        const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+        const nameValid = name.trim().length >= 3;
+        const phoneValid = /^62[0-9]{8,13}$/.test(phone.trim());
+        const addressValid = address.trim().length >= 10;
+
+        return !(emailValid && nameValid && phoneValid && addressValid);
       case 4:
       default:
         return false;

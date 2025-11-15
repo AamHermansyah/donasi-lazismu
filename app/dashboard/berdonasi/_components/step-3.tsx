@@ -6,7 +6,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { forwardRef } from 'react'
 import { FormTypes } from '../_types'
 
-type KeyType = 'name' | 'email' | 'message' | 'isHiddenName';
+type KeyType = 'name' | 'email' | 'message' | 'isHiddenName' | 'phone' | 'address';
 
 interface IProps {
   onChange: (key: KeyType, value: string | boolean) => void;
@@ -21,6 +21,7 @@ const Step3 = forwardRef<HTMLDivElement, IProps>(({ onChange, data }, ref) => {
         <h1 className="text-lg font-bold">Informasi Pribadi</h1>
       </div>
       <Input
+        id="name"
         placeholder="Nama Lengkap"
         className="focus-visible:border-secondary focus-visible:ring-0 focus-visible:ring-transparent"
         defaultValue={data.name}
@@ -29,11 +30,32 @@ const Step3 = forwardRef<HTMLDivElement, IProps>(({ onChange, data }, ref) => {
         }}
       />
       <Input
-        placeholder="Email atau Nomor Ponsel"
+        id="email"
+        placeholder="Email"
+        type="email"
         className="focus-visible:border-secondary focus-visible:ring-0 focus-visible:ring-transparent"
         defaultValue={data.email}
         onChange={(e) => {
           onChange('email', e.target.value);
+        }}
+      />
+      <Input
+        id="phone"
+        placeholder="Nomor Whatsapp (cth: 628xxxxxxx)"
+        type="tel"
+        className="focus-visible:border-secondary focus-visible:ring-0 focus-visible:ring-transparent"
+        defaultValue={data.phone}
+        onChange={(e) => {
+          onChange('phone', e.target.value);
+        }}
+      />
+      <Input
+        id="address"
+        placeholder="Alamat Tempat Tinggal"
+        className="focus-visible:border-secondary focus-visible:ring-0 focus-visible:ring-transparent"
+        defaultValue={data.address}
+        onChange={(e) => {
+          onChange('address', e.target.value);
         }}
       />
       <div className="flex items-center justify-between gap-2">

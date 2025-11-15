@@ -85,12 +85,12 @@ function TransactionInformation({ createdAt, id, status, statementVerified }: IP
         <div className="w-full flex gap-2">
           <ShareContent
             urlShare={urlShare}
-            title="Bagikan surat pernyataan donasi"
-            description="Ayo ajak rekan atau keluarga anda untuk berdonasi dengan membagikan surat pernyataan yang telah didapatkan!"
+            title="Bagikan sertifikat donasi"
+            description="Ayo ajak rekan atau keluarga anda untuk berdonasi dengan membagikan sertifikat yang telah didapatkan!"
           />
           <Link href={`/statement/${id}`} className="w-full" target="_blank" rel="noopener noreferrer">
             <Button className="w-full">
-              Lihat surat pernyataan
+              Lihat Sertifikat
             </Button>
           </Link>
         </div>

@@ -19,7 +19,7 @@ export async function POST(req: Request) {
 
     const currentUser = await getUserById(session.user.id!);
 
-    if (!currentUser?.id || !currentUser?.email) {
+    if (!currentUser) {
       return new NextResponse('Unauthorized', { status: 401 });
     }
 
@@ -40,7 +40,9 @@ export async function POST(req: Request) {
       userId,
       message,
       name,
-      isHiddenName
+      isHiddenName,
+      address,
+      phone
     } = validatedFields.data;
 
     const campaign = await db.campaign.findUnique({
@@ -105,6 +107,8 @@ export async function POST(req: Request) {
         isHiddenName,
         snapRedirectUrl: data.redirect_url,
         snapToken: data.token,
+        address,
+        phone
       },
     });
 
@@ -125,6 +129,16 @@ export async function POST(req: Request) {
         `
       }
     })
+
+    if (!currentUser.address || !currentUser.phoneNumber) {
+      await db.user.update({
+        where: { id: currentUser.id },
+        data: {
+          phoneNumber: currentUser.phoneNumber || phone,
+          address: currentUser.address || address
+        }
+      })
+    }
 
     return NextResponse.json(newTransaction, {
       status: 201

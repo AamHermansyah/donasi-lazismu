@@ -5,6 +5,7 @@ import { Campaign } from '@prisma/client';
 import { getCampaignById } from '@/data/campaign';
 import { FormTypes } from './_types';
 import { auth } from '@/lib/auth';
+import { getUserByEmail } from '@/data/user';
 
 interface IProps {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
@@ -21,6 +22,10 @@ async function BerwakafPage({ searchParams }: IProps) {
     });
   }
 
+  const user = await getUserByEmail(session?.user?.email || '');
+
+  if (!user) throw new Error('User not found');
+
   const initialForm: FormTypes = {
     step1: {
       amount: 0
@@ -31,8 +36,10 @@ async function BerwakafPage({ searchParams }: IProps) {
       paymentLogo: '',
     },
     step3: {
-      name: session?.user.name || '',
-      email: session?.user.email || '',
+      name: user.name || '',
+      email: user.email || '',
+      address: user.address || '',
+      phone: user.phoneNumber || '',
       isHiddenName: false,
       message: ''
     },

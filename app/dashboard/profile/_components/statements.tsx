@@ -82,7 +82,7 @@ function Statements({ data, limit, userId }: IProps) {
 
   return (
     <div className="bg-background p-4 rounded-xl shadow-sm space-y-2">
-      <h2 className="text-lg font-bold text-secondary">Surat Pernyataan</h2>
+      <h2 className="text-lg font-bold text-secondary">sertifikat</h2>
       <Table>
         <TableHead>
           <TableHeadCol className="rounded-l-lg">Tanggal</TableHeadCol>
@@ -115,7 +115,7 @@ function Statements({ data, limit, userId }: IProps) {
               <TableRow className="hover:bg-background">
                 {!hasMore ? (
                   <TableCell colSpan={4} className="text-center text-gray-500">
-                    Tidak ada lagi surat pernyataan
+                    Tidak ada lagi sertifikat
                   </TableCell>
                 ) : (
                   <TableCell colSpan={4} className="text-center">
@@ -136,7 +136,7 @@ function Statements({ data, limit, userId }: IProps) {
           ) : (
             <TableRow className="hover:bg-background">
               <TableCell colSpan={4} className="text-center text-gray-500">
-                Anda belum mempunyai surat pernyataan
+                Anda belum mempunyai sertifikat
               </TableCell>
             </TableRow>
           )}

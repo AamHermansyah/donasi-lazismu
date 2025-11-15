@@ -66,6 +66,8 @@ async function TransactionPage({ params }: IProps) {
             status={transaction.status}
             snapToken={transaction.snapToken}
             snapRedirectUrl={transaction.snapRedirectUrl}
+            address={transaction.address || '-'}
+            phone={transaction.phone || '-'}
           />
           <ContactCampaign
             phone={transaction.campaign.phone}

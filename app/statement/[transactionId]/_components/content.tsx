@@ -33,7 +33,7 @@ function Content({ data }: IProps) {
           dokumen administrasinya.
         </p>
         <p className="indent-10">
-          Demikian surat pernyataan ini dibuat dengan sebenarnya dan untuk dipergunakan sebagaimana mestinya.
+          Demikian sertifikat ini dibuat dengan sebenarnya dan untuk dipergunakan sebagaimana mestinya.
         </p>
       </section>
       <ContentFooter

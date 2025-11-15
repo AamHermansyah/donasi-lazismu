@@ -67,8 +67,16 @@ const Step4 = forwardRef<HTMLDivElement, IProps>(({ data, user, onChangeStep }, 
           </span>
         </div>
         <div className="flex items-center justify-between gap-2">
-          <span className="font-semibold text-gray-400">Email/Nomor Ponsel</span>
+          <span className="font-semibold text-gray-400">Email</span>
           <span className="text-right">{data.step3.email}</span>
+        </div>
+        <div className="flex items-center justify-between gap-2">
+          <span className="font-semibold text-gray-400">Nomor Whatsapp</span>
+          <span className="text-right">{data.step3.phone}</span>
+        </div>
+        <div className="flex items-center justify-between gap-2">
+          <span className="font-semibold text-gray-400">Alamat</span>
+          <span className="text-right">{data.step3.address}</span>
         </div>
       </div>
       <Separator />

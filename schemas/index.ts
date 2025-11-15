@@ -115,7 +115,7 @@ export const profileSchema = z.object({
 });
 
 export const transactionSchema = z.object({
-  name: z.string().min(1),
+  name: z.string().trim().min(3),
   isHiddenName: z.boolean(),
   email: z.string().email(),
   amount: z.number().min(20000),
@@ -130,6 +130,17 @@ export const transactionSchema = z.object({
     message: "User id harus diisi."
   }),
   campaignId: z.number().min(1),
+  phone: z
+    .string()
+    .regex(/^62[0-9]{8,13}$/, {
+      message: "Nomor telepon harus diawali 62 dan terdiri dari 10-15 digit angka."
+    }),
+  address: z
+    .string()
+    .trim()
+    .min(10, {
+      message: "Alamat minimal 10 karakter."
+    }),
 });
 
 export const accountSchema = z.object({

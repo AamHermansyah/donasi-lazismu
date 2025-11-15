@@ -63,9 +63,9 @@ export async function POST(req: Request, { params }: { params: Promise<IParams> 
           Selamat donasi anda pada kampanye 
           <b>${campaign.title}</b> 
           dengan nominal ${formatRupiah(transaction.amount)} telah berhasil diverifikasi. 
-          anda mendapatkan surat pernyataan resmi dengan klik tombol 
+          anda mendapatkan sertifikat resmi dengan klik tombol 
           <a href="/statement/${transaction.id}" target="_blank" rel="noopener noreferrer">
-            lihat surat pernyataan
+            lihat sertifikat
           </a>.
         `
       }

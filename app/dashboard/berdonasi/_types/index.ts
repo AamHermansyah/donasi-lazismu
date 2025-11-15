@@ -10,6 +10,8 @@ export interface FormTypes {
   step3: {
     name: string;
     email: string;
+    address: string;
+    phone: string;
     isHiddenName: boolean;
     message: string;
   }
