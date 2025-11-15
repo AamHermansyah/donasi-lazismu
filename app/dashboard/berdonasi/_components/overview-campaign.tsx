@@ -1,6 +1,6 @@
 import CardCampaign from '@/components/shared/card-campaign'
 import React from 'react'
-import HowToWakaf from './how-to-wakaf'
+import HowToDonate from './how-to-donate'
 import { Button } from '@/components/ui/button'
 import { Campaign } from '@prisma/client';
 import Link from 'next/link';
@@ -49,7 +49,7 @@ function OverviewCampaign({ data }: IProps) {
           </div>
         )}
       </div>
-      <HowToWakaf className="hidden md:block" />
+      <HowToDonate className="hidden md:block" />
     </div>
   )
 }

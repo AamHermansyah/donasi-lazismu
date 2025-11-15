@@ -75,25 +75,25 @@ function DetailOrder({
   };
 
   const handlePay = () => {
-    return new Promise((resolve, reject) => {
-      axios.post(`/api/user/transaction/${id}/completed`)
-        .then(() => {
-          setTimeout(() => {
-            router.refresh();
-          }, 2000);
-          toast.success('Anda berhasil melakukan pembayaran!');
-        })
-        .catch((error) => {
-          setPaying(false);
-          reject(error);
-        });
-    });
+    // return new Promise((resolve, reject) => {
+    //   axios.post(`/api/user/transaction/${id}/completed`)
+    //     .then(() => {
+    //       setTimeout(() => {
+    //         router.refresh();
+    //       }, 2000);
+    //       toast.success('Anda berhasil melakukan pembayaran!');
+    //     })
+    //     .catch((error) => {
+    //       setPaying(false);
+    //       reject(error);
+    //     });
+    // });
 
-    // if (!snapRedirectUrl || !snapToken) {
-    //   toast.error('Terjadi kesalahan ketika melakukan pembayaran');
-    // } else {
-    //   setPaying(true);
-    // }
+    if (!snapRedirectUrl || !snapToken) {
+      toast.error('Terjadi kesalahan ketika melakukan pembayaran');
+    } else {
+      setPaying(true);
+    }
   };
 
   return (

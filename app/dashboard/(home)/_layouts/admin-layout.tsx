@@ -1,10 +1,10 @@
 import React from 'react'
 import AdminOverview from '../_components/admin-overview'
 import IncomeChart from '@/components/shared/income-chart'
-import { getWakafIncomeLastYear } from '@/data/overview'
+import { getDonateIncomeLastYear } from '@/data/overview'
 
 const AdminLayout = async () => {
-  const chartData = await getWakafIncomeLastYear();
+  const chartData = await getDonateIncomeLastYear();
 
   return (
     <div>

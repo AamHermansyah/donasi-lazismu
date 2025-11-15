@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
-const WhatIsWakaf = () => {
+const WhatIsDonate = () => {
   return (
-    <section id="what-is-wakaf" className="py-10 sm:py-20 relative">
+    <section id="what-is-donate" className="py-10 sm:py-20 relative">
       <div className="container relative z-[1]">
         {/* Header */}
         <div className="sm:text-center mb-12 max-w-5xl mx-auto">
@@ -69,4 +69,4 @@ const WhatIsWakaf = () => {
 
 
 
-export default WhatIsWakaf;
+export default WhatIsDonate;

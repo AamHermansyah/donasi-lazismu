@@ -118,6 +118,10 @@ export async function POST(req: Request, { params }: { params: Promise<IParams> 
       return new NextResponse('Unauthorized', { status: 401 });
     }
 
+    if (process.env.NODE_ENV !== "development") {
+      return new NextResponse("Forbidden", { status: 403 });
+    }
+
     const currentUser = await getUserById(session.user.id!);
 
     if (!currentUser?.id || !currentUser?.email) {

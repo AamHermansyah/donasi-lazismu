@@ -9,13 +9,13 @@ import {
 import { FaCrown, FaMedal } from 'react-icons/fa'
 import { abbreviateName, anonymizeName, cn, formatRupiah, numberPrefixer } from '@/lib/utils'
 import { Button } from '@/components/ui/button';
-import { getTopWakif } from '@/data/wakif';
+import { getTopDonator } from '@/data/wakif';
 import { auth } from '@/lib/auth';
 
 const LeaderboardWakif = async () => {
   const session = await auth();
   const role = session?.user.role!;
-  const data = await getTopWakif(20, {
+  const data = await getTopDonator(20, {
     getYourRank: true,
     userId: session?.user.id!
   });

@@ -1,5 +1,5 @@
 import OverviewCampaign from './_components/overview-campaign'
-import HowToWakaf from './_components/how-to-wakaf'
+import HowToDonate from './_components/how-to-donate'
 import FormBerwakaf from './_components/form-berwakaf'
 import { Campaign } from '@prisma/client';
 import { getCampaignById } from '@/data/campaign';
@@ -52,7 +52,7 @@ async function BerwakafPage({ searchParams }: IProps) {
         />
       </div>
       <div className="p-4 sm:p-6 rounded-lg bg-background col-span-12 md:hidden">
-        <HowToWakaf />
+        <HowToDonate />
       </div>
     </div>
   )

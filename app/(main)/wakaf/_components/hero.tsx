@@ -8,15 +8,15 @@ const Hero = () => {
       <div className="container md:h-screen w-full flex flex-col-reverse md:flex-row items-center gap-10 space-y-4">
         <div className="flex-1 space-y-2 sm:space-y-4">
           <h1 className="text-3xl sm:text-5xl xl:text-6xl font-bold max-w-[765px]">
-          <i>Bersama</i> LAZISMU{" "}
-          <span className="text-secondary"> <i>Menebar</i> Kebaikan</span>
+            <i>Bersama</i> LAZISMU{" "}
+            <span className="text-secondary"> <i>Menebar</i> Kebaikan</span>
           </h1>
           <div>
             <h3 className="text-gray-600 text-xl lg:text-2xl font-medium">
-            Wujudkan kepedulian melalui zakat, infak, dan donasi
+              Wujudkan kepedulian melalui zakat, infak, dan donasi
             </h3>
             <p className="text-sm sm:text-base text-gray-500 max-w-xl leading-relaxed">
-            Setiap donasi yang Anda titipkan kepada LAZISMU dikelola secara{" "}
+              Setiap donasi yang Anda titipkan kepada LAZISMU dikelola secara{" "}
               <span className="text-secondary font-semibold">amanah, profesional, dan transparan</span>{" "}
               untuk mendukung program pemberdayaan umat di bidang{" "}
               pendidikan, ekonomi, dan sosial-dakwah.
@@ -28,7 +28,7 @@ const Hero = () => {
                 Donasi sekarang
               </Button>
             </Link>
-            <Link href="#what-is-wakaf">
+            <Link href="#what-is-donate">
               <Button variant="outline" className="w-full p-4 gap-2 mt-3 sm:mt-0">
                 Pelajari lebih lanjut <FaArrowRightLong />
               </Button>

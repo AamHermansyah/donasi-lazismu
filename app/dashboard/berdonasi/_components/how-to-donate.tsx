@@ -5,7 +5,7 @@ interface IProps {
   className?: string;
 }
 
-function HowToWakaf({ className }: IProps) {
+function HowToDonate({ className }: IProps) {
   return (
     <div className={cn('space-y-2', className)}>
       <h2 className="font-extrabold tracking-wide">Cara berdonasi</h2>
@@ -36,4 +36,4 @@ function HowToWakaf({ className }: IProps) {
   )
 }
 
-export default HowToWakaf
+export default HowToDonate

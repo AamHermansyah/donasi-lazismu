@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import IncomeChart from "../../../../components/shared/income-chart";
-import { getWakafIncomeLastYear } from "@/data/overview";
+import { getDonateIncomeLastYear } from "@/data/overview";
 
 const Statistic = async () => {
-  const chartData = await getWakafIncomeLastYear();
+  const chartData = await getDonateIncomeLastYear();
 
   if (!chartData.series.length || !chartData.categories.length) return null;
 
@@ -16,12 +16,12 @@ const Statistic = async () => {
             Data Pemasukan Donasi
           </h1>
           <p className="md:text-center xl:text-lg text-justify max-w-5xl mx-auto">
-          Melalui grafik ini, LAZISMU Kabupaten Tasikmalaya menampilkan data pemasukan
-          <b> zakat, infak, sedekah, dan wakaf </b> secara terbuka. Setiap transaksi dan
-          alokasi dana dicatat dengan sistem yang <span className="text-secondary font-semibold">
-          transparan dan akuntabel
-          </span>, sehingga masyarakat dapat memantau penggunaan donasi dengan rasa
-          percaya dan aman.
+            Melalui grafik ini, LAZISMU Kabupaten Tasikmalaya menampilkan data pemasukan
+            <b> zakat, infak, sedekah, dan wakaf </b> secara terbuka. Setiap transaksi dan
+            alokasi dana dicatat dengan sistem yang <span className="text-secondary font-semibold">
+              transparan dan akuntabel
+            </span>, sehingga masyarakat dapat memantau penggunaan donasi dengan rasa
+            percaya dan aman.
           </p>
         </div>
         <div className="px-4 sm:container mx-auto">

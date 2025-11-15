@@ -45,11 +45,11 @@ export const getWakifListTransaction = async (campaignId: number, config?: {
   }
 }
 
-export const getTopWakif = async (take = 10, config?: {
+export const getTopDonator = async (take = 10, config?: {
   getYourRank: boolean,
   userId: string
 }) => {
-  const topWakif = await db.user.findMany({
+  const TopDonator = await db.user.findMany({
     where: { role: 'USER' },
     orderBy: { berwakafTotal: 'desc' },
     select: {
@@ -78,12 +78,12 @@ export const getTopWakif = async (take = 10, config?: {
 
     return {
       yourRank: `${userRanking}`,
-      rank: topWakif
+      rank: TopDonator
     }
   }
 
   return {
     yourRank: null,
-    rank: topWakif
+    rank: TopDonator
   };
 }

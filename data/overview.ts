@@ -113,7 +113,7 @@ export const getAdminOverview = async () => {
   }
 }
 
-export async function getWakafIncomeLastYear() {
+export async function getDonateIncomeLastYear() {
   const data = await db.transaction.groupBy({
     by: ['createdAt'],
     _sum: {

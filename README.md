@@ -1,8 +1,8 @@
-# Wakaf On Chain
+# Donasi Berbasis Onchain
 
 ## Deskripsi
 
-**Wakaf On Chain** adalah platform berbasis blockchain yang menjamin transparansi dan akuntabilitas dalam pengelolaan dana ZISKA (Zakat, Infak, Sedekah, Wakaf). Platform ini dirancang untuk memudahkan donasi serta mendukung program pemberdayaan umat yang berkelanjutan melalui LAZISMU. donasi dapat dikelola dengan lebih efisien dan aman.	Dengan teknologi blockchain, setiap transaksi donasi dikelola lebih efisien, aman, dan dapat dilacak secara publik.
+**Donasi Berbasis Onchain** adalah platform berbasis blockchain yang menjamin transparansi dan akuntabilitas dalam pengelolaan dana ZISKA (Zakat, Infak, Sedekah, Wakaf). Platform ini dirancang untuk memudahkan donasi serta mendukung program pemberdayaan umat yang berkelanjutan melalui LAZISMU. donasi dapat dikelola dengan lebih efisien dan aman.	Dengan teknologi blockchain, setiap transaksi donasi dikelola lebih efisien, aman, dan dapat dilacak secara publik.
 
 ## Teknologi yang Digunakan
 
@@ -27,8 +27,8 @@
 1. **Clone repository ini:**
 
     ```bash
-    git clone https://github.com/username/wakaf-on-chain.git
-    cd wakaf-on-chain
+    git clone https://github.com/AamHermansyah/donasi-lazismu.git
+    cd donasi-lazismu
     ```
 
 2. **Instal dependensi:**

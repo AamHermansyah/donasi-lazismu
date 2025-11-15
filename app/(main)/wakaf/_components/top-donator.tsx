@@ -6,12 +6,12 @@ import {
   TableHeadCol,
   TableRow
 } from '@/components/core/table'
-import { getTopWakif } from '@/data/wakif';
+import { getTopDonator } from '@/data/wakif';
 import { abbreviateName, anonymizeName, cn, formatRupiah } from '@/lib/utils'
 import { FaCrown, FaMedal } from 'react-icons/fa'
 
-const TopWakifGrid = async () => {
-  const data = await getTopWakif();
+const TopDonatorGrid = async () => {
+  const data = await getTopDonator();
 
   if (data.rank.length === 0) return null;
 
@@ -81,4 +81,4 @@ const TopWakifGrid = async () => {
   );
 };
 
-export default TopWakifGrid;
+export default TopDonatorGrid;
